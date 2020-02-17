@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/manojkhatokar/Desktop/Time-master/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-hdpi-v4/values-hdpi-v4.xml",
+            "map": [
+                {
+                    "source": "/home/manojkhatokar/.gradle/caches/transforms-2/files-2.1/6d3e7fe45f4911efb79999b566d56548/res/values-hdpi-v4/values-hdpi-v4.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "6",
+                        "endColumns": "13",
+                        "endOffsets": "327"
+                    }
+                }
+            ]
+        }
+    ]
+}

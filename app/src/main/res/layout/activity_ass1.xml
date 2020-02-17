@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical"
+    tools:context=".aat1">
+
+    <TextView
+        android:id="@+id/ass1tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="ASSIGNMENTS"
+        android:textColor="#000"
+        android:textSize="30sp"
+        tools:text="AAT" />
+
+    <TextView
+        android:id="@+id/ass1tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:foregroundGravity="center"
+        android:text="No assignments"
+        android:gravity="center"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/aat1but2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="400dp"
+        android:src="@drawable/ic_add_black_24dp"
+        android:text="New Assignment" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

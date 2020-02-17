@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    -
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_syllabus"
+            android:title="Home" />
+
+        <item
+            android:id="@+id/nav_syllabus"
+            android:icon="@drawable/ic_syllabus"
+            android:title="Syllabus" />
+
+        <item
+            android:id="@+id/nav_notif"
+            android:icon="@drawable/ic_notifications_black_24dp"
+            android:title="Tasks" />
+
+        <item
+            android:id="@+id/nav_notes"
+            android:icon="@drawable/notes"
+            android:title="Notes" />
+
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_profile"
+            android:title="Profile" />
+
+        <item
+            android:id="@+id/nav_status"
+            android:icon="@drawable/ic_timeline_black_24dp"
+            android:title="Status" />
+
+        <item
+            android:id="@+id/nav_timeline"
+            android:icon="@drawable/ic_timeline_black_24dp"
+            android:title="Timeline" />
+
+        <item
+            android:id="@+id/nav_logout"
+            android:title="logout" />
+
+    </group>
+
+
+    -
+    <item android:title="sample">
+
+
+        -
+        <menu>
+
+            <item
+                android:id="@+id/nav_sample"
+                android:title="sample" />
+
+        </menu>
+
+    </item>
+
+</menu>

@@ -1,0 +1,26 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/manojkhatokar/Desktop/Time-master/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rSG/values-en-rSG.xml",
+            "map": [
+                {
+                    "source": "/home/manojkhatokar/.gradle/caches/transforms-2/files-2.1/be11a1753ca6d23a3483acac8c16ba79/res/values-en-rSG/values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "206",
+                        "endColumns": "99",
+                        "endOffsets": "305"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "103",
+                        "endOffsets": "154"
+                    }
+                }
+            ]
+        }
+    ]
+}
