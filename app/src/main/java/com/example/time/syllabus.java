@@ -90,7 +90,7 @@ public class syllabus extends AppCompatActivity {
                         .addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void aVoid) {
-                                Toast.makeText(getApplicationContext(), "DocumentSnapshot successfully written " + topic_list, Toast.LENGTH_SHORT).show();
+                                //Toast.makeText(getApplicationContext(), "DocumentSnapshot successfully written " + topic_list, Toast.LENGTH_SHORT).show();
                             }
                         })
                         .addOnFailureListener(new OnFailureListener() {
@@ -108,29 +108,23 @@ public class syllabus extends AppCompatActivity {
                         .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
                             @Override
                             public void onSuccess(DocumentSnapshot documentSnapshot) {
-                                Object sub_list = documentSnapshot.get("Subject");
+                                final String sub_list = (String) documentSnapshot.get("Subject");
                                 Toast.makeText(getApplicationContext(), sub_list.toString(), Toast.LENGTH_LONG).show();
-                                sub_list.add(syll_title);
+                                final String sub_list2 = sub_list.concat(", " + syll_title);
+                                Map<String, Object> subj = new HashMap<>();
+                                subj.put("Subject", sub_list2);
 
                                 rootRef.collection("users").document("user1").collection("Title").document("Title_d")
-                                        .update("Subject", sub_list)
+                                        .update(subj)
                                         .addOnSuccessListener(new OnSuccessListener<Void>() {
                                     @Override
                                     public void onSuccess(Void aVoid) {
-                                        Toast.makeText(getApplicationContext(), "Updated subject title list", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(getApplicationContext(), "Updated subject title list" + sub_list2, Toast.LENGTH_SHORT).show();
                                     }
                                 });
                             }
                         });
 
-
-                        /*.update("Subject", syll_title)
-                        .addOnSuccessListener(new OnSuccessListener<Void>() {
-                    @Override
-                    public void onSuccess(Void aVoid) {
-                        Toast.makeText(getApplicationContext(), "Created document", Toast.LENGTH_SHORT).show();
-                    }
-                });*/
 
 
             }
