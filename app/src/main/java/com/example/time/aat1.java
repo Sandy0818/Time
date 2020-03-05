@@ -1,13 +1,12 @@
 package com.example.time;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.os.Bundle;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class aat1 extends AppCompatActivity {
     TextView aat1tv1;
@@ -23,6 +22,7 @@ public class aat1 extends AppCompatActivity {
         aat1tv2=findViewById(R.id.aat1tv2);
         aat1but2=findViewById(R.id.aat1but2);
         String st1=null;
+
         try{st1=getIntent().getExtras().getString("sub");}
         catch(NullPointerException ignored){}
         aat1tv2.setText(st1);
@@ -30,7 +30,8 @@ public class aat1 extends AppCompatActivity {
         aat1but2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openActivity1();
+                //openActivity1();
+                openDialog();
             }
         });
     }
@@ -38,5 +39,13 @@ public class aat1 extends AppCompatActivity {
     {
         Intent intent2 = new Intent(this, aat2.class);
         startActivity(intent2);
-    }}
+    }
+
+    public <activity_popup_dialog> void openDialog()
+    {
+        popup_dialog popup_dialog = new popup_dialog();
+        popup_dialog.show(getSupportFragmentManager(),"example");
+    }
+
+}
 
