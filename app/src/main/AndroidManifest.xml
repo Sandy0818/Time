@@ -3,6 +3,7 @@
     package="com.example.time">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -11,6 +12,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".signupform"></activity>
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".proj3" />
         <activity android:name=".proj2" />
         <activity android:name=".proj1" />
@@ -27,15 +36,7 @@
         <!-- <activity android:name=".popup_dialog" /> -->
         <!-- <activity android:name=".status" /> -->
         <!-- <activity android:name=".notes" /> -->
-        <activity android:name=".signupform" />
         <activity android:name=".home" />
-        <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
     </application>
 
 </manifest>

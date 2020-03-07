@@ -640,6 +640,10 @@
         "source": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_timeline_black_24dp.png"
     },
     {
+        "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_signupform2.xml.flat",
+        "source": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\src\\main\\res\\layout\\activity_signupform2.xml"
+    },
+    {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\anim_design_snackbar_in.xml.flat",
         "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\893a9dd97fd75d8218a48e5bcf5a601b\\res\\anim\\design_snackbar_in.xml"
     },
@@ -2472,6 +2476,10 @@
         "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\4e6cdabbade472efddb27b6a153caf05\\res\\drawable-xxhdpi-v4\\ic_media_stop_light.png"
     },
     {
+        "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main2.xml.flat",
+        "source": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\src\\main\\res\\layout\\activity_main2.xml"
+    },
+    {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_navigation_item_header.xml.flat",
         "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\893a9dd97fd75d8218a48e5bcf5a601b\\res\\layout\\design_navigation_item_header.xml"
     },
@@ -4030,10 +4038,6 @@
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_mr_vol_type_audiotrack_light.xml.flat",
         "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\4e6cdabbade472efddb27b6a153caf05\\res\\drawable\\mr_vol_type_audiotrack_light.xml"
-    },
-    {
-        "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
-        "source": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_ic_mr_button_connecting_29_dark.png.flat",

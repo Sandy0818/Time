@@ -1,49 +1,121 @@
 package com.example.time;
+
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.os.Bundle;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 
-public class signupform extends AppCompatActivity {
+//import android.support.annotation.NonNull;
+//import android.support.v7.app.AppCompatActivity;
 
-    public EditText uname;
-    public EditText usn;
-    public EditText email1;
-    public EditText pass1;
-    public EditText cpass1;
-    public EditText sem1;
+public class signupform extends AppCompatActivity implements View.OnClickListener {
+
+
+    //defining views
+    private Button buttonSignIn;
+    private EditText editTextEmail;
+    private EditText editTextPassword;
+    private TextView textViewSignup;
+
+    //firebase auth object
+    private FirebaseAuth firebaseAuth;
+
+    //progress dialog
+    private ProgressDialog progressDialog;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signupform);
 
-        uname = (EditText) findViewById(R.id.editText);
-        email1 = (EditText) findViewById(R.id.editText);
-        usn = (EditText) findViewById(R.id.editText4);
-        pass1 = (EditText) findViewById(R.id.edittext21);
-        cpass1 = (EditText) findViewById(R.id.editText5);
-        sem1 = (EditText) findViewById(R.id.editText6);
+        //getting firebase auth object
+        firebaseAuth = FirebaseAuth.getInstance();
+
+        //if the objects getcurrentuser method is not null
+        //means user is already logged in
+        if(firebaseAuth.getCurrentUser() != null){
+            //close this activity
+            finish();
+            //opening profile activity
+            startActivity(new Intent(getApplicationContext(), home.class));
+        }
+
+        //initializing views
+        editTextEmail = (EditText) findViewById(R.id.editTextEmail);
+        editTextPassword = (EditText) findViewById(R.id.editTextPassword);
+        buttonSignIn = (Button) findViewById(R.id.buttonSignin);
+        textViewSignup  = (TextView) findViewById(R.id.textViewSignUp);
+
+        progressDialog = new ProgressDialog(this);
+
+        //attaching click listener
+        buttonSignIn.setOnClickListener(this);
+        textViewSignup.setOnClickListener(this);
     }
-    public void home(View view) {
 
-        String unames = uname.getText().toString().trim();
-        String emails = email1.getText().toString().trim();
-        String usns = usn.getText().toString().trim();
-        String passs = pass1.getText().toString().trim();
-        String cpasss = cpass1.getText().toString().trim();
-        String sems = sem1.getText().toString().trim();
+    //method for user login
+    private void userLogin(){
+        String email = editTextEmail.getText().toString().trim();
+        String password  = editTextPassword.getText().toString().trim();
 
-        if (TextUtils.isEmpty(unames) || TextUtils.isEmpty(emails) || TextUtils.isEmpty(usns) || TextUtils.isEmpty(passs) || TextUtils.isEmpty(cpasss) || TextUtils.isEmpty(sems))
-            Toast.makeText(signupform.this, "Fields can't be empty", Toast.LENGTH_LONG).show();
-        else {
-            Intent intent = new Intent(signupform.this, home.class);
-            startActivity(intent);
+
+        //checking if email and passwords are empty
+        if(TextUtils.isEmpty(email)){
+            Toast.makeText(this,"Please enter email",Toast.LENGTH_LONG).show();
+            return;
+        }
+
+        if(TextUtils.isEmpty(password)){
+            Toast.makeText(this,"Please enter password",Toast.LENGTH_LONG).show();
+            return;
+        }
+
+        //if the email and password are not empty
+        //displaying a progress dialog
+
+        progressDialog.setMessage("Registering Please Wait...");
+        progressDialog.show();
+
+        //logging in the user
+        firebaseAuth.signInWithEmailAndPassword(email, password)
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        progressDialog.dismiss();
+                        //if the task is successfull
+                        if(task.isSuccessful()){
+                            //start the profile activity
+                            finish();
+                            startActivity(new Intent(getApplicationContext(), home.class));
+                        }
+                    }
+                });
+
+    }
+
+    @Override
+    public void onClick(View view) {
+        if(view == buttonSignIn){
+            userLogin();
+        }
+
+        if(view == textViewSignup){
+            finish();
+            startActivity(new Intent(this, MainActivity.class));
         }
     }
 }
