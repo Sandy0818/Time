@@ -12,6 +12,15 @@ android:orientation="vertical"
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:gravity="center"
+        android:text="LOGIN"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+
     <EditText
         android:id="@+id/editTextEmail"
         android:layout_width="match_parent"
@@ -29,18 +38,26 @@ android:orientation="vertical"
         android:inputType="textPassword" />
 
     <Button
-        android:id="@+id/buttonSignup"
+        android:id="@+id/buttonlogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
-        android:text="Signup" />
+        android:text="Login" />
+
     <TextView
-        android:text="Already Registered? Signin Here"
-        android:id="@+id/textViewSignin"
-        android:textAlignment="center"
-        android:layout_margin="15dp"
+        android:id="@+id/textViewSignup"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:text="Dont have an account?Register here"
+        android:textAlignment="center" />
+
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible" />
 
 </LinearLayout>
 

@@ -1,14 +1,12 @@
 package com.example.time;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.os.Bundle;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class ass1 extends AppCompatActivity {
     TextView ass1tv1;
@@ -21,7 +19,7 @@ public class ass1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ass1);
         ass1tv1=findViewById(R.id.aat1tv1);
-        ass1tv2=findViewById(R.id.aat1tv2);
+        ass1tv2=findViewById(R.id.ass1tv2);
         ass1but2=findViewById(R.id.aat1but2);
         String st5=null;
         try{

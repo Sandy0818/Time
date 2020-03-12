@@ -150,7 +150,12 @@ public class home extends AppCompatActivity implements NavigationView.OnNavigati
                 break;
 
             case R.id.nav_logout:
-                Toast.makeText(home.this, "no notifcations", Toast.LENGTH_LONG).show();
+                Toast.makeText(home.this, "Logged out", Toast.LENGTH_LONG).show();
+                firebaseAuth.getInstance().signOut();
+                //closing activity
+                finish();
+                //starting login activity
+                startActivity(new Intent(this, MainActivity.class));;
                 break;
 
         }

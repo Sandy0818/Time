@@ -12,12 +12,12 @@
         "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\56620a00fe9510ba98c46322e6adc780\\res\\drawable-xxhdpi-v4\\abc_textfield_activated_mtrl_alpha.9.png"
     },
     {
-        "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_mr_button_connected_light.xml.flat",
-        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\4e6cdabbade472efddb27b6a153caf05\\res\\drawable\\mr_button_connected_light.xml"
-    },
-    {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_home.xml.flat",
         "source": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\src\\main\\res\\layout\\activity_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_mr_button_connected_light.xml.flat",
+        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\4e6cdabbade472efddb27b6a153caf05\\res\\drawable\\mr_button_connected_light.xml"
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_quantum_ic_volume_up_white_36.png.flat",
@@ -36,12 +36,12 @@
         "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\8dd95de4fc88bdd59d8d65a02cb86842\\res\\drawable-xxxhdpi-v4\\quantum_ic_volume_off_white_36.png"
     },
     {
-        "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_tooltip_frame_dark.xml.flat",
-        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\56620a00fe9510ba98c46322e6adc780\\res\\drawable\\tooltip_frame_dark.xml"
-    },
-    {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_notes.png.flat",
         "source": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\notes.png"
+    },
+    {
+        "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_tooltip_frame_dark.xml.flat",
+        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\56620a00fe9510ba98c46322e6adc780\\res\\drawable\\tooltip_frame_dark.xml"
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-watch-v20_abc_alert_dialog_title_material.xml.flat",
@@ -60,16 +60,16 @@
         "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\0ec1c2c751478edd4d994378616c182a\\res\\layout\\notification_template_icon_group.xml"
     },
     {
-        "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_dialog_material_background.xml.flat",
-        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\56620a00fe9510ba98c46322e6adc780\\res\\drawable\\abc_dialog_material_background.xml"
+        "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\layout_place_autocomplete_item_prediction.xml.flat",
+        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\d4f9af91b5c2975f73c9400b4573f9bf\\res\\layout\\place_autocomplete_item_prediction.xml"
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\color_mtrl_tabs_icon_color_selector.xml.flat",
         "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\893a9dd97fd75d8218a48e5bcf5a601b\\res\\color\\mtrl_tabs_icon_color_selector.xml"
     },
     {
-        "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\layout_place_autocomplete_item_prediction.xml.flat",
-        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\d4f9af91b5c2975f73c9400b4573f9bf\\res\\layout\\place_autocomplete_item_prediction.xml"
+        "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_dialog_material_background.xml.flat",
+        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\56620a00fe9510ba98c46322e6adc780\\res\\drawable\\abc_dialog_material_background.xml"
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\color_switch_thumb_material_light.xml.flat",
@@ -112,12 +112,12 @@
         "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\56620a00fe9510ba98c46322e6adc780\\res\\color\\abc_secondary_text_material_dark.xml"
     },
     {
-        "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_ic_mr_button_connecting_24_dark.png.flat",
-        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\4e6cdabbade472efddb27b6a153caf05\\res\\drawable-xxhdpi-v4\\ic_mr_button_connecting_24_dark.png"
-    },
-    {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_ic_mr_button_connected_14_light.png.flat",
         "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\4e6cdabbade472efddb27b6a153caf05\\res\\drawable-xhdpi-v4\\ic_mr_button_connected_14_light.png"
+    },
+    {
+        "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_ic_mr_button_connecting_24_dark.png.flat",
+        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\4e6cdabbade472efddb27b6a153caf05\\res\\drawable-xxhdpi-v4\\ic_mr_button_connecting_24_dark.png"
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_syllabus_home.xml.flat",
@@ -132,12 +132,12 @@
         "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\4e6cdabbade472efddb27b6a153caf05\\res\\drawable-mdpi-v4\\ic_mr_button_grey.png"
     },
     {
-        "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_spinner_mtrl_am_alpha.9.png.flat",
-        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\56620a00fe9510ba98c46322e6adc780\\res\\drawable-hdpi-v4\\abc_spinner_mtrl_am_alpha.9.png"
-    },
-    {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_quantum_ic_play_arrow_white_24.png.flat",
         "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\8dd95de4fc88bdd59d8d65a02cb86842\\res\\drawable-hdpi-v4\\quantum_ic_play_arrow_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_spinner_mtrl_am_alpha.9.png.flat",
+        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\56620a00fe9510ba98c46322e6adc780\\res\\drawable-hdpi-v4\\abc_spinner_mtrl_am_alpha.9.png"
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_textfield_search_default_mtrl_alpha.9.png.flat",
@@ -169,7 +169,7 @@
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\color_common_google_signin_btn_tint.xml.flat",
-        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\971f00e5ec636207edb8b80760d0e624\\res\\color\\common_google_signin_btn_tint.xml"
+        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\95bf79a267e93863981480fdd3621bcb\\res\\color\\common_google_signin_btn_tint.xml"
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_ic_mr_button_connected_20_light.png.flat",
@@ -389,7 +389,7 @@
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_common_google_signin_btn_text_dark_normal_background.9.png.flat",
-        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\971f00e5ec636207edb8b80760d0e624\\res\\drawable-hdpi-v4\\common_google_signin_btn_text_dark_normal_background.9.png"
+        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\95bf79a267e93863981480fdd3621bcb\\res\\drawable-hdpi-v4\\common_google_signin_btn_text_dark_normal_background.9.png"
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_list_longpressed_holo.9.png.flat",
@@ -466,6 +466,10 @@
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_quantum_ic_volume_up_grey600_36.png.flat",
         "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\8dd95de4fc88bdd59d8d65a02cb86842\\res\\drawable-xxhdpi-v4\\quantum_ic_volume_up_grey600_36.png"
+    },
+    {
+        "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\layout_popupwork.xml.flat",
+        "source": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\src\\main\\res\\layout\\popupwork.xml"
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_places_ic_search.png.flat",
@@ -585,7 +589,7 @@
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_googleg_disabled_color_18.png.flat",
-        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\971f00e5ec636207edb8b80760d0e624\\res\\drawable-xxhdpi-v4\\googleg_disabled_color_18.png"
+        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\95bf79a267e93863981480fdd3621bcb\\res\\drawable-xxhdpi-v4\\googleg_disabled_color_18.png"
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_navi.png.flat",
@@ -761,7 +765,7 @@
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_icon_dark.xml.flat",
-        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\971f00e5ec636207edb8b80760d0e624\\res\\drawable\\common_google_signin_btn_icon_dark.xml"
+        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\95bf79a267e93863981480fdd3621bcb\\res\\drawable\\common_google_signin_btn_icon_dark.xml"
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_add_black_24dp.png.flat",
@@ -1217,7 +1221,7 @@
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_common_google_signin_btn_icon_light_normal_background.9.png.flat",
-        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\971f00e5ec636207edb8b80760d0e624\\res\\drawable-hdpi-v4\\common_google_signin_btn_icon_light_normal_background.9.png"
+        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\95bf79a267e93863981480fdd3621bcb\\res\\drawable-hdpi-v4\\common_google_signin_btn_icon_light_normal_background.9.png"
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_launcher_background.png.flat",
@@ -1257,7 +1261,7 @@
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_icon_light_focused.xml.flat",
-        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\971f00e5ec636207edb8b80760d0e624\\res\\drawable\\common_google_signin_btn_icon_light_focused.xml"
+        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\95bf79a267e93863981480fdd3621bcb\\res\\drawable\\common_google_signin_btn_icon_light_focused.xml"
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_cast_ic_notification_0.png.flat",
@@ -1809,7 +1813,7 @@
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_common_google_signin_btn_icon_light_normal_background.9.png.flat",
-        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\971f00e5ec636207edb8b80760d0e624\\res\\drawable-xxhdpi-v4\\common_google_signin_btn_icon_light_normal_background.9.png"
+        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\95bf79a267e93863981480fdd3621bcb\\res\\drawable-xxhdpi-v4\\common_google_signin_btn_icon_light_normal_background.9.png"
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_syllabus.png.flat",
@@ -1917,7 +1921,7 @@
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_common_google_signin_btn_text_dark_normal_background.9.png.flat",
-        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\971f00e5ec636207edb8b80760d0e624\\res\\drawable-xxhdpi-v4\\common_google_signin_btn_text_dark_normal_background.9.png"
+        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\95bf79a267e93863981480fdd3621bcb\\res\\drawable-xxhdpi-v4\\common_google_signin_btn_text_dark_normal_background.9.png"
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\color_mtrl_btn_text_btn_ripple_color.xml.flat",
@@ -1933,7 +1937,7 @@
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_googleg_standard_color_18.png.flat",
-        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\971f00e5ec636207edb8b80760d0e624\\res\\drawable-mdpi-v4\\googleg_standard_color_18.png"
+        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\95bf79a267e93863981480fdd3621bcb\\res\\drawable-mdpi-v4\\googleg_standard_color_18.png"
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_notifications_none_black_24dp.png.flat",
@@ -2145,7 +2149,7 @@
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_text_light.xml.flat",
-        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\971f00e5ec636207edb8b80760d0e624\\res\\drawable\\common_google_signin_btn_text_light.xml"
+        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\95bf79a267e93863981480fdd3621bcb\\res\\drawable\\common_google_signin_btn_text_light.xml"
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_vector_test.xml.flat",
@@ -2185,7 +2189,7 @@
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_icon_disabled.xml.flat",
-        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\971f00e5ec636207edb8b80760d0e624\\res\\drawable\\common_google_signin_btn_icon_disabled.xml"
+        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\95bf79a267e93863981480fdd3621bcb\\res\\drawable\\common_google_signin_btn_icon_disabled.xml"
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_ic_menu_paste_mtrl_am_alpha.png.flat",
@@ -2237,7 +2241,7 @@
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_icon_dark_normal.xml.flat",
-        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\971f00e5ec636207edb8b80760d0e624\\res\\drawable\\common_google_signin_btn_icon_dark_normal.xml"
+        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\95bf79a267e93863981480fdd3621bcb\\res\\drawable\\common_google_signin_btn_icon_dark_normal.xml"
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_quantum_ic_skip_next_white_24.png.flat",
@@ -2325,7 +2329,7 @@
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_text_dark_normal.xml.flat",
-        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\971f00e5ec636207edb8b80760d0e624\\res\\drawable\\common_google_signin_btn_text_dark_normal.xml"
+        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\95bf79a267e93863981480fdd3621bcb\\res\\drawable\\common_google_signin_btn_text_dark_normal.xml"
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_ic_mr_button_disabled_dark.png.flat",
@@ -2417,7 +2421,7 @@
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_common_google_signin_btn_text_light_normal_background.9.png.flat",
-        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\971f00e5ec636207edb8b80760d0e624\\res\\drawable-xxhdpi-v4\\common_google_signin_btn_text_light_normal_background.9.png"
+        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\95bf79a267e93863981480fdd3621bcb\\res\\drawable-xxhdpi-v4\\common_google_signin_btn_text_light_normal_background.9.png"
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\color-v23_abc_btn_colored_borderless_text_material.xml.flat",
@@ -2437,7 +2441,7 @@
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_common_google_signin_btn_icon_dark_normal_background.9.png.flat",
-        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\971f00e5ec636207edb8b80760d0e624\\res\\drawable-mdpi-v4\\common_google_signin_btn_icon_dark_normal_background.9.png"
+        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\95bf79a267e93863981480fdd3621bcb\\res\\drawable-mdpi-v4\\common_google_signin_btn_icon_dark_normal_background.9.png"
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_scrubber_control_off_mtrl_alpha.png.flat",
@@ -2529,7 +2533,7 @@
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_common_google_signin_btn_icon_dark_normal_background.9.png.flat",
-        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\971f00e5ec636207edb8b80760d0e624\\res\\drawable-xhdpi-v4\\common_google_signin_btn_icon_dark_normal_background.9.png"
+        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\95bf79a267e93863981480fdd3621bcb\\res\\drawable-xhdpi-v4\\common_google_signin_btn_icon_dark_normal_background.9.png"
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_quantum_ic_cast_connected_white_24.png.flat",
@@ -2561,7 +2565,7 @@
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_text_dark_focused.xml.flat",
-        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\971f00e5ec636207edb8b80760d0e624\\res\\drawable\\common_google_signin_btn_text_dark_focused.xml"
+        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\95bf79a267e93863981480fdd3621bcb\\res\\drawable\\common_google_signin_btn_text_dark_focused.xml"
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_quantum_ic_skip_previous_grey600_36.png.flat",
@@ -2685,7 +2689,7 @@
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_googleg_standard_color_18.png.flat",
-        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\971f00e5ec636207edb8b80760d0e624\\res\\drawable-xxhdpi-v4\\googleg_standard_color_18.png"
+        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\95bf79a267e93863981480fdd3621bcb\\res\\drawable-xxhdpi-v4\\googleg_standard_color_18.png"
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_notification_bg_low_pressed.9.png.flat",
@@ -3061,7 +3065,7 @@
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_common_google_signin_btn_text_light_normal_background.9.png.flat",
-        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\971f00e5ec636207edb8b80760d0e624\\res\\drawable-mdpi-v4\\common_google_signin_btn_text_light_normal_background.9.png"
+        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\95bf79a267e93863981480fdd3621bcb\\res\\drawable-mdpi-v4\\common_google_signin_btn_text_light_normal_background.9.png"
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_setting.png.flat",
@@ -3273,7 +3277,7 @@
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_icon_dark_focused.xml.flat",
-        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\971f00e5ec636207edb8b80760d0e624\\res\\drawable\\common_google_signin_btn_icon_dark_focused.xml"
+        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\95bf79a267e93863981480fdd3621bcb\\res\\drawable\\common_google_signin_btn_icon_dark_focused.xml"
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_tab_indicator_mtrl_alpha.9.png.flat",
@@ -3465,7 +3469,7 @@
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_text_light_normal.xml.flat",
-        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\971f00e5ec636207edb8b80760d0e624\\res\\drawable\\common_google_signin_btn_text_light_normal.xml"
+        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\95bf79a267e93863981480fdd3621bcb\\res\\drawable\\common_google_signin_btn_text_light_normal.xml"
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_quantum_ic_refresh_white_24.png.flat",
@@ -3485,7 +3489,7 @@
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_common_google_signin_btn_icon_light_normal_background.9.png.flat",
-        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\971f00e5ec636207edb8b80760d0e624\\res\\drawable-xhdpi-v4\\common_google_signin_btn_icon_light_normal_background.9.png"
+        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\95bf79a267e93863981480fdd3621bcb\\res\\drawable-xhdpi-v4\\common_google_signin_btn_icon_light_normal_background.9.png"
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_scrubber_control_to_pressed_mtrl_005.png.flat",
@@ -3581,7 +3585,7 @@
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_common_google_signin_btn_text_light_normal_background.9.png.flat",
-        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\971f00e5ec636207edb8b80760d0e624\\res\\drawable-hdpi-v4\\common_google_signin_btn_text_light_normal_background.9.png"
+        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\95bf79a267e93863981480fdd3621bcb\\res\\drawable-hdpi-v4\\common_google_signin_btn_text_light_normal_background.9.png"
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_notification_bg.xml.flat",
@@ -3901,7 +3905,7 @@
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_common_google_signin_btn_text_dark_normal_background.9.png.flat",
-        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\971f00e5ec636207edb8b80760d0e624\\res\\drawable-xhdpi-v4\\common_google_signin_btn_text_dark_normal_background.9.png"
+        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\95bf79a267e93863981480fdd3621bcb\\res\\drawable-xhdpi-v4\\common_google_signin_btn_text_dark_normal_background.9.png"
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_ic_vol_type_speaker_group_dark.png.flat",
@@ -3933,7 +3937,7 @@
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_common_full_open_on_phone.png.flat",
-        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\971f00e5ec636207edb8b80760d0e624\\res\\drawable-hdpi-v4\\common_full_open_on_phone.png"
+        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\95bf79a267e93863981480fdd3621bcb\\res\\drawable-hdpi-v4\\common_full_open_on_phone.png"
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\layout_cast_help_text.xml.flat",
@@ -3997,11 +4001,11 @@
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_googleg_disabled_color_18.png.flat",
-        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\971f00e5ec636207edb8b80760d0e624\\res\\drawable-mdpi-v4\\googleg_disabled_color_18.png"
+        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\95bf79a267e93863981480fdd3621bcb\\res\\drawable-mdpi-v4\\googleg_disabled_color_18.png"
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_text_dark.xml.flat",
-        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\971f00e5ec636207edb8b80760d0e624\\res\\drawable\\common_google_signin_btn_text_dark.xml"
+        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\95bf79a267e93863981480fdd3621bcb\\res\\drawable\\common_google_signin_btn_text_dark.xml"
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_ic_mr_button_connected_21_light.png.flat",
@@ -4017,7 +4021,7 @@
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_googleg_disabled_color_18.png.flat",
-        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\971f00e5ec636207edb8b80760d0e624\\res\\drawable-hdpi-v4\\googleg_disabled_color_18.png"
+        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\95bf79a267e93863981480fdd3621bcb\\res\\drawable-hdpi-v4\\googleg_disabled_color_18.png"
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_tab_indicator_mtrl_alpha.9.png.flat",
@@ -4077,7 +4081,7 @@
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_common_full_open_on_phone.png.flat",
-        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\971f00e5ec636207edb8b80760d0e624\\res\\drawable-xhdpi-v4\\common_full_open_on_phone.png"
+        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\95bf79a267e93863981480fdd3621bcb\\res\\drawable-xhdpi-v4\\common_full_open_on_phone.png"
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_ic_plusone_tall_off_client.png.flat",
@@ -4113,7 +4117,7 @@
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_googleg_disabled_color_18.png.flat",
-        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\971f00e5ec636207edb8b80760d0e624\\res\\drawable-xhdpi-v4\\googleg_disabled_color_18.png"
+        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\95bf79a267e93863981480fdd3621bcb\\res\\drawable-xhdpi-v4\\googleg_disabled_color_18.png"
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_ic_group_collapse_13.png.flat",
@@ -4180,10 +4184,6 @@
         "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\8dd95de4fc88bdd59d8d65a02cb86842\\res\\drawable-xhdpi-v4\\quantum_ic_play_circle_filled_white_36.png"
     },
     {
-        "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_custom_big.xml.flat",
-        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\0ec1c2c751478edd4d994378616c182a\\res\\layout\\notification_template_custom_big.xml"
-    },
-    {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_notification_bg_normal.9.png.flat",
         "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\0ec1c2c751478edd4d994378616c182a\\res\\drawable-hdpi-v4\\notification_bg_normal.9.png"
     },
@@ -4205,7 +4205,7 @@
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_googleg_standard_color_18.png.flat",
-        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\971f00e5ec636207edb8b80760d0e624\\res\\drawable-xhdpi-v4\\googleg_standard_color_18.png"
+        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\95bf79a267e93863981480fdd3621bcb\\res\\drawable-xhdpi-v4\\googleg_standard_color_18.png"
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_btn_check_to_on_mtrl_000.png.flat",
@@ -4305,7 +4305,7 @@
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_text_disabled.xml.flat",
-        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\971f00e5ec636207edb8b80760d0e624\\res\\drawable\\common_google_signin_btn_text_disabled.xml"
+        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\95bf79a267e93863981480fdd3621bcb\\res\\drawable\\common_google_signin_btn_text_disabled.xml"
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_cab_background_top_mtrl_alpha.9.png.flat",
@@ -4365,7 +4365,7 @@
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_icon_light.xml.flat",
-        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\971f00e5ec636207edb8b80760d0e624\\res\\drawable\\common_google_signin_btn_icon_light.xml"
+        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\95bf79a267e93863981480fdd3621bcb\\res\\drawable\\common_google_signin_btn_icon_light.xml"
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_cast_ic_notification_0.png.flat",
@@ -4441,7 +4441,7 @@
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_googleg_standard_color_18.png.flat",
-        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\971f00e5ec636207edb8b80760d0e624\\res\\drawable-hdpi-v4\\googleg_standard_color_18.png"
+        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\95bf79a267e93863981480fdd3621bcb\\res\\drawable-hdpi-v4\\googleg_standard_color_18.png"
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_cast_ic_stop_circle_filled_grey600.png.flat",
@@ -4649,7 +4649,7 @@
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_common_google_signin_btn_icon_dark_normal_background.9.png.flat",
-        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\971f00e5ec636207edb8b80760d0e624\\res\\drawable-hdpi-v4\\common_google_signin_btn_icon_dark_normal_background.9.png"
+        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\95bf79a267e93863981480fdd3621bcb\\res\\drawable-hdpi-v4\\common_google_signin_btn_icon_dark_normal_background.9.png"
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\animator_mtrl_fab_hide_motion_spec.xml.flat",
@@ -4725,7 +4725,7 @@
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\color_common_google_signin_btn_text_light.xml.flat",
-        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\971f00e5ec636207edb8b80760d0e624\\res\\color\\common_google_signin_btn_text_light.xml"
+        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\95bf79a267e93863981480fdd3621bcb\\res\\color\\common_google_signin_btn_text_light.xml"
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_text_select_handle_right_mtrl_light.png.flat",
@@ -4885,7 +4885,7 @@
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_common_google_signin_btn_text_dark_normal_background.9.png.flat",
-        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\971f00e5ec636207edb8b80760d0e624\\res\\drawable-mdpi-v4\\common_google_signin_btn_text_dark_normal_background.9.png"
+        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\95bf79a267e93863981480fdd3621bcb\\res\\drawable-mdpi-v4\\common_google_signin_btn_text_dark_normal_background.9.png"
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-xxhdpi-v17_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
@@ -5229,7 +5229,7 @@
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_icon_light_normal.xml.flat",
-        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\971f00e5ec636207edb8b80760d0e624\\res\\drawable\\common_google_signin_btn_icon_light_normal.xml"
+        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\95bf79a267e93863981480fdd3621bcb\\res\\drawable\\common_google_signin_btn_icon_light_normal.xml"
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_quantum_ic_refresh_white_24.png.flat",
@@ -5261,7 +5261,7 @@
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_common_google_signin_btn_icon_dark_normal_background.9.png.flat",
-        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\971f00e5ec636207edb8b80760d0e624\\res\\drawable-xxhdpi-v4\\common_google_signin_btn_icon_dark_normal_background.9.png"
+        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\95bf79a267e93863981480fdd3621bcb\\res\\drawable-xxhdpi-v4\\common_google_signin_btn_icon_dark_normal_background.9.png"
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_scrubber_control_to_pressed_mtrl_005.png.flat",
@@ -5273,7 +5273,7 @@
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_common_google_signin_btn_icon_light_normal_background.9.png.flat",
-        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\971f00e5ec636207edb8b80760d0e624\\res\\drawable-mdpi-v4\\common_google_signin_btn_icon_light_normal_background.9.png"
+        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\95bf79a267e93863981480fdd3621bcb\\res\\drawable-mdpi-v4\\common_google_signin_btn_icon_light_normal_background.9.png"
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_cab_background_top_mtrl_alpha.9.png.flat",
@@ -5613,7 +5613,7 @@
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_text_light_focused.xml.flat",
-        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\971f00e5ec636207edb8b80760d0e624\\res\\drawable\\common_google_signin_btn_text_light_focused.xml"
+        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\95bf79a267e93863981480fdd3621bcb\\res\\drawable\\common_google_signin_btn_text_light_focused.xml"
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_seekbar_thumb_material.xml.flat",
@@ -5641,7 +5641,7 @@
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\color_common_google_signin_btn_text_dark.xml.flat",
-        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\971f00e5ec636207edb8b80760d0e624\\res\\color\\common_google_signin_btn_text_dark.xml"
+        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\95bf79a267e93863981480fdd3621bcb\\res\\color\\common_google_signin_btn_text_dark.xml"
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\layout_support_simple_spinner_dropdown_item.xml.flat",
@@ -5685,7 +5685,7 @@
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_common_google_signin_btn_text_light_normal_background.9.png.flat",
-        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\971f00e5ec636207edb8b80760d0e624\\res\\drawable-xhdpi-v4\\common_google_signin_btn_text_light_normal_background.9.png"
+        "source": "C:\\Users\\Siri\\.gradle\\caches\\transforms-2\\files-2.1\\95bf79a267e93863981480fdd3621bcb\\res\\drawable-xhdpi-v4\\common_google_signin_btn_text_light_normal_background.9.png"
     },
     {
         "merged": "C:\\Users\\Siri\\AndroidStudioProjects\\Time-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_ic_group_collapse_06.png.flat",

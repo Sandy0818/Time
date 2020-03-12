@@ -1636,7 +1636,6 @@ id SHIFT
 id SYM
 id aat1but2
 id aat1tv1
-id aat1tv2
 id aat2
 id accessibility_action_clickable_span
 id accessibility_custom_action_0
@@ -1725,13 +1724,13 @@ id book_now
 id bottom
 id button
 id buttonPanel
-id buttonSignin
 id buttonSignup
 id button_0
 id button_1
 id button_2
 id button_3
 id button_play_pause_toggle
+id buttonlogin
 id buyButton
 id buy_now
 id buy_with
@@ -1789,6 +1788,7 @@ id dialog_button
 id dimensions
 id direct
 id disableHome
+id display_aat
 id donate_with
 id donate_with_google
 id drawer_layout
@@ -1856,6 +1856,7 @@ id labeled
 id largeLabel
 id large_icon_uri
 id lay1
+id lay2
 id left
 id light
 id line1
@@ -1968,6 +1969,7 @@ id place_autocomplete_separator
 id plain
 id production
 id progressBar
+id progressBar2
 id progress_circular
 id progress_horizontal
 id proj1but2
@@ -2045,7 +2047,6 @@ id submenuarrow
 id submit_area
 id submit_syllabus
 id subtitle_view
-id syll_button
 id syllabus_title
 id tabMode
 id tab_host
@@ -2074,8 +2075,7 @@ id textStart
 id textTitle
 id textView
 id textView8
-id textViewSignUp
-id textViewSignin
+id textViewSignup
 id text_input_password_toggle
 id text_list_view
 id textinput_counter
@@ -2097,6 +2097,7 @@ id transition_layout_save
 id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
+id tv
 id tv1
 id tv2
 id tv3
@@ -2257,6 +2258,7 @@ layout place_autocomplete_fragment
 layout place_autocomplete_item_powered_by_google
 layout place_autocomplete_item_prediction
 layout place_autocomplete_progress
+layout popupwork
 layout refer
 layout select_dialog_item_material
 layout select_dialog_multichoice_material

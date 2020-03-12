@@ -2,6 +2,7 @@
   <library name="Gradle: com.google.android.material:material:1.0.0@aar">
     <ANNOTATIONS>
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/893a9dd97fd75d8218a48e5bcf5a601b/annotations.zip!/" />
+      <root url="file://$PROJECT_DIR$/../Time-push2" />
     </ANNOTATIONS>
     <CLASSES>
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/893a9dd97fd75d8218a48e5bcf5a601b/res" />

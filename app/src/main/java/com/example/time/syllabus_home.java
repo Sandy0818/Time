@@ -27,11 +27,11 @@ public class syllabus_home extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_syllabus_home);
-        FloatingActionButton add_syll = (FloatingActionButton) findViewById(R.id.floatingActionButton);
-        final LinearLayout layout = (LinearLayout) findViewById(R.id.lay1);
+        final FloatingActionButton add_syll = (FloatingActionButton) findViewById(R.id.floatingActionButton);
+        final LinearLayout layout =(LinearLayout) findViewById(R.id.lay1);
 
         //get list of all subjects from db n create unique button for each subject
-        Button new_syll = (Button) findViewById(R.id.syll_button);
+        //Button new_syll = (Button) findViewById(R.id.syll_button);
 
         final FirebaseFirestore db = FirebaseFirestore.getInstance();
 
@@ -62,7 +62,14 @@ public class syllabus_home extends AppCompatActivity {
 
                                                   button.setOnClickListener(buttonClick);
                                               }
+
+                                              /*Log.d("BUTTON", "changing gravity of fab");
+                                              LinearLayout.LayoutParams lp = (LinearLayout.LayoutParams) add_syll.getLayoutParams();
+                                              lp.gravity = Gravity.BOTTOM | GravityCompat.END;
+                                              add_syll.setLayoutParams(lp);*/
                                           }
+
+
 
                                           View.OnClickListener buttonClick = new View.OnClickListener() {
                                               @Override
@@ -92,14 +99,14 @@ public class syllabus_home extends AppCompatActivity {
             }
         });
 
-        new_syll.setOnClickListener(new View.OnClickListener() {
+       /* new_syll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //send subject name as extra data to activity
                 Intent intent = new Intent(getApplicationContext(), view_syllabus.class);
                 startActivity(intent);
             }
-        });
+        });*/
 
 
     }

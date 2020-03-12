@@ -9,7 +9,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatDialogFragment;
 
@@ -30,6 +29,15 @@ public class popup_dialog extends AppCompatDialogFragment {
     private DatePicker aatdate;
     final FirebaseFirestore db = FirebaseFirestore.getInstance();
     Button but1;
+
+    Onaataddedlistener callback;
+    public void setOnaataddedlistener(Onaataddedlistener callback){
+        this.callback=callback;
+    }
+
+    public interface Onaataddedlistener{
+        public void onaatadded();
+    }
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
@@ -86,7 +94,7 @@ public class popup_dialog extends AppCompatDialogFragment {
                                         aat_list = aat;
 
                                     Map<String, Object> subj = new HashMap<>();
-                                    subj.put("Subject", aat_list);
+                                    subj.put("AAT", aat_list);
 
                                     final String finalAat_list = aat_list;
                                     db.collection("users").document("user1").collection("Title").document("Title_d")
@@ -94,7 +102,13 @@ public class popup_dialog extends AppCompatDialogFragment {
                                             .addOnSuccessListener(new OnSuccessListener<Void>() {
                                                 @Override
                                                 public void onSuccess(Void aVoid) {
-                                                    Toast.makeText(getContext(), "Updated aat title list" + finalAat_list, Toast.LENGTH_SHORT).show();
+                                                    try {
+                                                        dismiss();
+                                                        callback.onaatadded();
+                                                    }
+                                                    catch (NullPointerException e){}
+
+                                                    //Toast.makeText(getContext(), "Updated aat title list" + finalAat_list, Toast.LENGTH_SHORT).show();
                                                 }
                                             });
                                 }
