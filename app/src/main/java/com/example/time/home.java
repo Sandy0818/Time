@@ -49,13 +49,13 @@ public class home extends AppCompatActivity implements NavigationView.OnNavigati
             public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
                 String date = year + "/" + "/" + month + 1 + "/" + dayOfMonth;
                 Log.d(tag, "onselecteddatechanged date=" + date);
-                openDialog();
+               // openDialog();
             }
 
 
         });
     }
-    public <activity_popup_dialog> void openDialog()
+   public <activity_popup_dialog> void openDialog()
     {
         popup_dialog popup_dialog = new popup_dialog();
         popup_dialog.show(getSupportFragmentManager(),"example");

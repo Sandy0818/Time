@@ -39,6 +39,10 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <activity android:name="com.example.time.popupexam1" />
+        <activity android:name="com.example.time.popupexam" />
+        <activity android:name="com.example.time.exam3" />
+        <activity android:name="com.example.time.exam2" />
         <activity android:name="com.example.time.signupform" />
         <activity android:name="com.example.time.MainActivity" >
             <intent-filter>

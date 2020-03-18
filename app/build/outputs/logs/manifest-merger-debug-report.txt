@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:2:1-42:12
-INJECTED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:2:1-42:12
-INJECTED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:2:1-42:12
-INJECTED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:2:1-42:12
+ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:2:1-46:12
+INJECTED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:2:1-46:12
+INJECTED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:2:1-46:12
+INJECTED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:2:1-46:12
 MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\Siri\.gradle\caches\transforms-2\files-2.1\bd309dd1eb81500ff45d3ed5265ea653\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\Siri\.gradle\caches\transforms-2\files-2.1\893a9dd97fd75d8218a48e5bcf5a601b\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.gms:play-services:12.0.1] C:\Users\Siri\.gradle\caches\transforms-2\files-2.1\dae530633c2e8e92fad83a6b827028b3\AndroidManifest.xml:2:1-6:12
@@ -146,20 +146,20 @@ MERGED from [com.google.android.gms:play-services-vision-common-license:12.0.1] 
 MERGED from [com.google.android.gms:play-services-vision-license:12.0.1] C:\Users\Siri\.gradle\caches\transforms-2\files-2.1\7d29c2013eb5b6364810ca2fe826490a\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.gms:play-services-wallet-license:12.0.1] C:\Users\Siri\.gradle\caches\transforms-2\files-2.1\f6c87ca634e41b8ab9ac35a8a610242e\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.gms:play-services-wearable-license:12.0.1] C:\Users\Siri\.gradle\caches\transforms-2\files-2.1\fd31685bb07ee47ba370d05c8cd10a85\AndroidManifest.xml:17:1-24:12
-INJECTED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:2:1-42:12
-INJECTED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:2:1-42:12
-INJECTED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:2:1-42:12
+INJECTED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:2:1-46:12
+INJECTED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:2:1-46:12
+INJECTED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:2:1-46:12
 	package
 		ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:3:5-31
 		INJECTED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:2:1-42:12
+		ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:2:1-46:12
 		INJECTED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:2:1-42:12
+		ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:2:1-46:12
 		INJECTED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:2:11-69
@@ -198,7 +198,7 @@ MERGED from [com.google.android.gms:play-services-ads-lite:12.0.1] C:\Users\Siri
 	android:name
 		ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:6:22-64
 application
-ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:8:5-40:19
+ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:8:5-44:19
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\Siri\.gradle\caches\transforms-2\files-2.1\893a9dd97fd75d8218a48e5bcf5a601b\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\Siri\.gradle\caches\transforms-2\files-2.1\893a9dd97fd75d8218a48e5bcf5a601b\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.gms:play-services:12.0.1] C:\Users\Siri\.gradle\caches\transforms-2\files-2.1\dae530633c2e8e92fad83a6b827028b3\AndroidManifest.xml:5:5-20
@@ -399,80 +399,96 @@ MERGED from [com.google.android.gms:play-services-wearable-license:12.0.1] C:\Us
 		ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:9:9-35
 	android:theme
 		ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:14:9-40
-activity#com.example.time.signupform
+activity#com.example.time.popupexam1
 ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:15:9-57
 	android:name
 		ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:15:19-45
+activity#com.example.time.popupexam
+ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:16:9-47
+	android:name
+		ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:16:19-44
+activity#com.example.time.exam3
+ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:17:9-43
+	android:name
+		ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:17:19-40
+activity#com.example.time.exam2
+ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:18:9-43
+	android:name
+		ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:18:19-40
+activity#com.example.time.signupform
+ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:19:9-48
+	android:name
+		ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:19:19-45
 activity#com.example.time.MainActivity
-ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:16:9-22:20
+ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:20:9-26:20
 	android:name
-		ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:16:19-47
+		ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:20:19-47
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:17:13-21:29
+ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:21:13-25:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:18:17-69
+ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:22:17-69
 	android:name
-		ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:18:25-66
+		ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:22:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:20:17-77
+ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:24:17-77
 	android:name
-		ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:20:27-74
+		ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:24:27-74
 activity#com.example.time.proj3
-ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:23:9-43
-	android:name
-		ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:23:19-40
-activity#com.example.time.proj2
-ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:24:9-43
-	android:name
-		ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:24:19-40
-activity#com.example.time.proj1
-ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:25:9-43
-	android:name
-		ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:25:19-40
-activity#com.example.time.work1
-ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:26:9-43
-	android:name
-		ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:26:19-40
-activity#com.example.time.exam1
 ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:27:9-43
 	android:name
 		ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:27:19-40
+activity#com.example.time.proj2
+ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:28:9-43
+	android:name
+		ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:28:19-40
+activity#com.example.time.proj1
+ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:29:9-43
+	android:name
+		ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:29:19-40
+activity#com.example.time.work1
+ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:30:9-43
+	android:name
+		ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:30:19-40
+activity#com.example.time.exam1
+ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:31:9-43
+	android:name
+		ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:31:19-40
 activity#com.example.time.ass2
-ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:28:9-42
+ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:32:9-42
 	android:name
-		ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:28:19-39
+		ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:32:19-39
 activity#com.example.time.ass1
-ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:29:9-42
+ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:33:9-42
 	android:name
-		ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:29:19-39
+		ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:33:19-39
 activity#com.example.time.aat2
-ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:30:9-42
+ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:34:9-42
 	android:name
-		ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:30:19-39
+		ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:34:19-39
 activity#com.example.time.aat1
-ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:31:9-42
+ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:35:9-42
 	android:name
-		ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:31:19-39
+		ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:35:19-39
 activity#com.example.time.tasks
-ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:32:9-43
+ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:36:9-43
 	android:name
-		ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:32:19-40
+		ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:36:19-40
 activity#com.example.time.syllabus_home
-ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:33:9-51
+ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:37:9-51
 	android:name
-		ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:33:19-48
+		ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:37:19-48
 activity#com.example.time.syllabus
-ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:34:9-46
+ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:38:9-46
 	android:name
-		ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:34:19-43
+		ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:38:19-43
 activity#com.example.time.view_syllabus
-ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:35:9-51
+ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:39:9-51
 	android:name
-		ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:35:19-48
+		ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:39:19-48
 activity#com.example.time.home
-ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:39:9-42
+ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:43:9-42
 	android:name
-		ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:39:19-39
+		ADDED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml:43:19-39
 uses-sdk
 INJECTED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Siri\AndroidStudioProjects\Time-master\app\src\main\AndroidManifest.xml
