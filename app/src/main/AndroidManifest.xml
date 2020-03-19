@@ -42,6 +42,9 @@
         <!-- <activity android:name=".status" /> -->
         <!-- <activity android:name=".notes" /> -->
         <activity android:name=".home" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

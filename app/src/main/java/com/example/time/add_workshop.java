@@ -195,8 +195,7 @@ public class add_workshop extends AppCompatDialogFragment {
                     @Override
                     public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
 
-                        mHour = (hourOfDay <=
-                                12) ? hourOfDay : (hourOfDay - 12);
+                        mHour = (hourOfDay <= 12) ? hourOfDay : (hourOfDay - 12);
                         mMinute = minute;
 
                         date_time_slct.setText(date_time + " " + mHour + ":" + mMinute);

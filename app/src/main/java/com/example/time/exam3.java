@@ -1,7 +1,6 @@
 package com.example.time;
 
 import android.graphics.Color;
-import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -18,7 +17,6 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class exam3 extends AppCompatActivity {
@@ -28,11 +26,13 @@ public class exam3 extends AppCompatActivity {
     ArrayList<String> time_list = new ArrayList<>(); //read lest of topics of given subject from db
     ArrayList<Boolean> status = new ArrayList<>();
     Bundle extras;
-    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR1)
+
+    //@RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR1)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exam3);
+
         TextView subject = (TextView) findViewById(R.id.subject_view);
         Button update_syll = (Button) findViewById(R.id.save_top);
         final LinearLayout linearLayout = (LinearLayout) findViewById(R.id.list_topics);
@@ -41,44 +41,50 @@ public class exam3 extends AppCompatActivity {
         if(extras == null)
             sub = null;
         else
-            sub = (String) extras.get("Subject_name");
-        try{
-            Log.d("TAG", sub);
+            sub = (String) extras.get("Exam Subject");
+
+            Log.d("EXAMS", sub);
+
             subject.setText(sub);
 
             final FirebaseFirestore db = FirebaseFirestore.getInstance();
-            db.collection("users").document("user1").collection("exams list").document(sub)
-                    .get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
-                @Override
-                public void onSuccess(DocumentSnapshot documentSnapshot) {
-                    Toast.makeText(getApplicationContext(), "Read document", Toast.LENGTH_SHORT).show();
-                    topic_list = (ArrayList<String>) documentSnapshot.get("topics");
-                    time_list=(ArrayList<String>) documentSnapshot.get("time");
-                    status = (ArrayList<Boolean>) documentSnapshot.get("checkbox state");
-                    Log.d("EXAMS", topic_list.toString());
-                    Log.d("EXAMS", time_list.toString());
 
-                    for(int i = 0; i < topic_list.size(); i++)
-                    {
-                        CheckBox cb = new CheckBox(getApplicationContext());
-                        cb.setText(topic_list.get(i));
-                        cb.setId(i);
+        db.collection("users").document("user1").collection("exams list").document(sub)
+                .get().
+                addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+            @Override
+            public void onSuccess(DocumentSnapshot documentSnapshot) {
+                Toast.makeText(getApplicationContext(), "Read document", Toast.LENGTH_SHORT).show();
 
-                        //set the checked value based on what is stored in db
-                        if(status.get(i) == true)
-                            cb.setChecked(true);
-                        else
-                            cb.setChecked(false);
+                topic_list = (ArrayList<String>) documentSnapshot.get("tasks");
+                time_list = (ArrayList<String>) documentSnapshot.get("time");
+                status = (ArrayList<Boolean>) documentSnapshot.get("checkbox state");
 
-                        cb.setTextColor(Color.DKGRAY);
-                        cb.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
-                        cb.setTextSize(15);
+                for(int i = 0; i < topic_list.size(); i++)
+                {
+                    CheckBox cb = new CheckBox(getApplicationContext());
+                    cb.setText(topic_list.get(i) + " Time: " + time_list.get(i));
+                    cb.setId(i);
 
-                        linearLayout.addView(cb);
-                    }
+                    //set the checked value based on what is stored in db
+                    if(status.get(i) == true)
+                        cb.setChecked(true);
+                    else
+                        cb.setChecked(false);
 
+                    cb.setTextColor(Color.DKGRAY);
+                    //cb.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+                    cb.setTextSize(15);
+
+                    linearLayout.addView(cb);
                 }
-            }); update_syll.setOnClickListener(new View.OnClickListener() {
+
+                //topic_list = Arrays.asList(topics);
+                Toast.makeText(getApplicationContext(), topic_list.toString(), Toast.LENGTH_SHORT).show();
+            }
+        });
+
+            update_syll.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     Log.d("EXAMS", String.valueOf(linearLayout.getChildCount()));
@@ -101,7 +107,7 @@ public class exam3 extends AppCompatActivity {
 
                     HashMap<String, Object> data = new HashMap<>();
                     data.put("checkbox state", status);
-                    data.put("topics", topic_list);
+                    data.put("tasks", topic_list);
                     data.put("time",time_list);
 
                     db.collection("users").document("user1").collection("exams list").document(sub)
@@ -113,7 +119,7 @@ public class exam3 extends AppCompatActivity {
                                 }
                             });
                 }
-            });}catch(Exception e){}
+            });
 
     }
 }

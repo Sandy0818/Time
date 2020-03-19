@@ -94,14 +94,13 @@
 
     <Button
         android:id="@+id/addbutton"
+        style="@style/ButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="50dp"
         android:layout_marginRight="50dp"
-        android:background="#FFFFFF"
         android:text="ADD"
-        android:textColor="#B4006E"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
@@ -112,14 +111,14 @@
         android:layout_marginStart="50dp"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="40dp"
-        android:background="#FFFFFF"
         android:text="CANCEL"
-        android:textColor="#B4006E"
+        style="@style/ButtonStyle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
     <TextView
         android:id="@+id/textView2"
+        style="@style/ActivityHeadings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
@@ -128,6 +127,8 @@
         android:layout_marginEnd="100dp"
         android:layout_marginRight="100dp"
         android:text="NEW WORKSHOP"
+        android:textAlignment="center"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

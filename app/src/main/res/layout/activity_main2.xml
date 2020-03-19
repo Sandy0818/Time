@@ -6,59 +6,61 @@ android:layout_height="match_parent"
 android:orientation="vertical"
     tools:context="com.example.time.MainActivity">
 
-<LinearLayout
-    android:layout_centerVertical="true"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical">
-
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="15dp"
-        android:gravity="center"
-        android:text="LOGIN"
-        android:textColor="@color/black"
-        android:textSize="20dp" />
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/editTextEmail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="15dp"
-        android:hint="Enter email"
-        android:inputType="textEmailAddress" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:gravity="center"
+            android:text="LOGIN"
+            style="@style/ActivityHeadings"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
 
-    <EditText
-        android:id="@+id/editTextPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="15dp"
-        android:hint="Enter password"
-        android:inputType="textPassword" />
+        <EditText
+            android:id="@+id/editTextEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:hint="Enter email"
+            android:inputType="textEmailAddress" />
 
-    <Button
-        android:id="@+id/buttonlogin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="15dp"
-        android:text="Login" />
+        <EditText
+            android:id="@+id/editTextPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:hint="Enter password"
+            android:inputType="textPassword" />
 
-    <TextView
-        android:id="@+id/textViewSignup"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="15dp"
-        android:text="Dont have an account?Register here"
-        android:textAlignment="center" />
+        <Button
+            android:id="@+id/buttonlogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:text="Login" />
 
-    <ProgressBar
-        android:id="@+id/progressBar2"
-        style="?android:attr/progressBarStyle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:visibility="invisible" />
+        <TextView
+            android:id="@+id/textViewSignup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:text="Dont have an account?Register here"
+            android:textAlignment="center" />
 
-</LinearLayout>
+        <ProgressBar
+            android:id="@+id/progressBar2"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="invisible" />
+
+    </LinearLayout>
 
 </RelativeLayout>
