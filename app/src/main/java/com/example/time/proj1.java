@@ -106,7 +106,7 @@ public class proj1 extends AppCompatActivity implements CallBackListener {
                             String name = ((Button) v).getText().toString();
                             Toast.makeText(getApplicationContext(), "button name " + name, Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent(getApplicationContext(), aat_display.class);
-                            intent.putExtra("AAT_name", name);
+                            intent.putExtra("Project_name", name);
                             startActivity(intent);
                         }
                     };

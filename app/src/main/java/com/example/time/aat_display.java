@@ -40,19 +40,6 @@ public class aat_display extends AppCompatActivity {
                         Log.d("AAT", documentSnapshot.toString());
                         name.setText(documentSnapshot.get("Title").toString());
 
-                        /*String d = ((Timestamp) documentSnapshot.get("Date")).toString();
-                        Log.d("AAT", d);
-                        DateFormat informat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
-                        DateFormat oformat = new SimpleDateFormat("dd/MM/yyyy");
-                        Date dt = null;
-                        try {
-                            dt = informat.parse(d);
-                        } catch (ParseException e) {
-                            e.printStackTrace();
-                        }
-                        String odt = oformat.format(dt);
-                        date.setText(odt);*/
-
                         date.setText(documentSnapshot.get("Date").toString());
                         desc.setText(documentSnapshot.get("Descp").toString());
                     }

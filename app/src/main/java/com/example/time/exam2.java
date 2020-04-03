@@ -1,5 +1,6 @@
 package com.example.time;
 
+import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.graphics.Color;
 import android.os.Build;
@@ -9,9 +10,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
@@ -35,8 +36,7 @@ public class exam2 extends AppCompatActivity {
     List<String> time_list = new ArrayList<>();
     List<String> task_list = new ArrayList<>();
     List<Boolean> task_state = new ArrayList<>();
-    TextView exam2tv3;
-    EditText exam2et3;
+    EditText exam2et3, date_disp;
     TimePickerDialog timePickerDialog;
     Calendar calendar;
     int currenthour;
@@ -54,6 +54,7 @@ public class exam2 extends AppCompatActivity {
         Button exam2but1 = (Button) findViewById(R.id.exam2but1);
         final EditText exam2et1 = (EditText) findViewById(R.id.exam2et1);
         final EditText exam2et2 = (EditText) findViewById(R.id.exam2et2);
+        date_disp = findViewById(R.id.exam_date);
         final LinearLayout ll = findViewById(R.id.linear_list);
         Button exam2but2 = findViewById(R.id.exam2but2);
 
@@ -88,6 +89,28 @@ public class exam2 extends AppCompatActivity {
         } catch (Exception e) {
         }
 
+        final Calendar myCalendar = Calendar.getInstance();
+
+        final DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener() {
+
+            @Override
+            public void onDateSet(DatePicker view, int year, int monthOfYear,
+                                  int dayOfMonth) {
+                // TODO Auto-generated method stub
+                updateLabel(dayOfMonth, monthOfYear, year);
+            }
+
+        };
+
+        date_disp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new DatePickerDialog(exam2.this, date, myCalendar
+                        .get(Calendar.YEAR), myCalendar.get(Calendar.MONTH),
+                        myCalendar.get(Calendar.DAY_OF_MONTH)).show();
+            }
+        });
+
         //Toast.makeText(this, topic, Toast.LENGTH_SHORT).show();
 
 
@@ -112,7 +135,7 @@ public class exam2 extends AppCompatActivity {
                 exam2et2.setHint("Enter New Task");
 
                 exam2et3.setText("");
-                exam2et3.setHint("Enter the time u wanna study the topic");
+                exam2et3.setHint("Enter the time you wanna study the topic");
 
             }
         });
@@ -144,8 +167,11 @@ public class exam2 extends AppCompatActivity {
 
                 final String exam_sub = exam2et1.getText().toString();
                 final String topic_time = exam2et3.getText().toString();
+                final String exam_date = date_disp.getText().toString();
+
                 HashMap<String, Object> exams = new HashMap<>();
                 exams.put("exam subject", exam_sub);
+                exams.put("exam date", exam_date);
                 exams.put("tasks", task_list);
                 exams.put("time", time_list);
                 exams.put("checkbox state", task_state);
@@ -222,6 +248,12 @@ public class exam2 extends AppCompatActivity {
         Log.d("EXAMS", "added - " + time_list.toString());
         Log.d("EXAMS", "added - " + task_list.toString());
 
+    }
+
+    private void updateLabel(int date, int month, int yr)
+    {
+        String slc_date = date + "-" + month + "-" + yr;
+        date_disp.setText(slc_date);
     }
 
 }

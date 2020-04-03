@@ -1,5 +1,7 @@
 package com.example.time;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
@@ -11,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
@@ -26,6 +29,8 @@ public class exam3 extends AppCompatActivity {
     ArrayList<String> time_list = new ArrayList<>(); //read lest of topics of given subject from db
     ArrayList<Boolean> status = new ArrayList<>();
     Bundle extras;
+    LinearLayout linearLayout;
+    FloatingActionButton new_topic;
 
     //@RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR1)
     @Override
@@ -33,9 +38,10 @@ public class exam3 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exam3);
 
-        TextView subject = (TextView) findViewById(R.id.subject_view);
-        Button update_syll = (Button) findViewById(R.id.save_top);
-        final LinearLayout linearLayout = (LinearLayout) findViewById(R.id.list_topics);
+        TextView subject = findViewById(R.id.subject_view);
+        Button update_syll = findViewById(R.id.save_top);
+        linearLayout = findViewById(R.id.list_topics);
+        new_topic = findViewById(R.id.add_topic);
 
         extras = getIntent().getExtras();
         if(extras == null)
@@ -60,26 +66,8 @@ public class exam3 extends AppCompatActivity {
                 time_list = (ArrayList<String>) documentSnapshot.get("time");
                 status = (ArrayList<Boolean>) documentSnapshot.get("checkbox state");
 
-                for(int i = 0; i < topic_list.size(); i++)
-                {
-                    CheckBox cb = new CheckBox(getApplicationContext());
-                    cb.setText(topic_list.get(i) + " Time: " + time_list.get(i));
-                    cb.setId(i);
+                display_checklist();
 
-                    //set the checked value based on what is stored in db
-                    if(status.get(i) == true)
-                        cb.setChecked(true);
-                    else
-                        cb.setChecked(false);
-
-                    cb.setTextColor(Color.DKGRAY);
-                    //cb.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
-                    cb.setTextSize(15);
-
-                    linearLayout.addView(cb);
-                }
-
-                //topic_list = Arrays.asList(topics);
                 Toast.makeText(getApplicationContext(), topic_list.toString(), Toast.LENGTH_SHORT).show();
             }
         });
@@ -121,5 +109,81 @@ public class exam3 extends AppCompatActivity {
                 }
             });
 
+            new_topic.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                }
+            });
+
+    }
+
+    View.OnLongClickListener deleteCB = new View.OnLongClickListener() {
+        @Override
+        public boolean onLongClick(View v) {
+
+            final int cb_no = v.getId();
+            Log.d("exam", topic_list.get(cb_no));
+            Log.d("exam", time_list.get(cb_no));
+
+            AlertDialog.Builder builder1 = new AlertDialog.Builder(exam3.this);
+            builder1.setMessage("Are you sure you want to delete - \n" + topic_list.get(cb_no) + " : " + time_list.get(cb_no));
+            builder1.setCancelable(true);
+
+            builder1.setPositiveButton(
+                    "Yes",
+                    new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+                            dialog.cancel();
+                            //remove from arraylists and display checklists again
+
+                            topic_list.remove(cb_no);
+                            time_list.remove(cb_no);
+                            Toast.makeText(exam3.this, "Item successfully deleted", Toast.LENGTH_SHORT).show();
+                            display_checklist();
+                        }
+                    });
+
+            builder1.setNegativeButton(
+                    "No",
+                    new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+                            dialog.cancel();
+                            //do nothing
+                        }
+                    });
+
+            AlertDialog alert11 = builder1.create();
+            alert11.show();
+
+            return true;
+        }
+    };
+
+    public void display_checklist()
+    {
+        if(linearLayout.getChildCount() > 0)
+            linearLayout.removeAllViews();
+
+        for(int i = 0; i < topic_list.size(); i++)
+        {
+            CheckBox cb = new CheckBox(getApplicationContext());
+            cb.setText(topic_list.get(i) + " Time: " + time_list.get(i));
+            cb.setId(i);
+
+            //set the checked value based on what is stored in db
+            if(status.get(i) == true)
+                cb.setChecked(true);
+            else
+                cb.setChecked(false);
+
+            cb.setTextColor(Color.DKGRAY);
+            //cb.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+            cb.setTextSize(15);
+
+            cb.setOnLongClickListener(deleteCB);
+
+            linearLayout.addView(cb);
+        }
     }
 }

@@ -9,32 +9,32 @@
 
     <TextView
         android:id="@+id/exam2tv1"
+        style="@style/SubHeadings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Exam Subject"
-        android:textColor="#000000"
-        android:textSize="30sp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        android:text="Exam Subject: "
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/exam2et1"
-        android:layout_width="wrap_content"
+        android:layout_width="190dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:ems="10"
+        android:layout_marginTop="30dp"
         android:hint="Enter Subject"
         android:inputType="textPersonName"
+        android:textSize="15dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/exam2tv1" />
+        app:layout_constraintStart_toEndOf="@+id/exam2tv1"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -43,13 +43,12 @@
 
         <TextView
             android:id="@+id/exam2tv2"
+            style="@style/SubHeadings"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="30dp"
-            android:text="Topic:"
-            android:textColor="@color/black"
-            android:textSize="15sp" />
+            android:text="Topic: " />
 
         <EditText
             android:id="@+id/exam2et2"
@@ -59,16 +58,16 @@
             android:layout_marginTop="30dp"
             android:layout_marginRight="20dp"
             android:layout_weight="1"
-            android:ems="10"
             android:hint="Enter the topic you want to study"
             android:inputType="textPersonName"
-            android:textSize="15dp" />
+            android:textSize="15sp" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -77,13 +76,12 @@
 
         <TextView
             android:id="@+id/exam2tv3"
+            style="@style/SubHeadings"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="30dp"
-            android:text="Time:"
-            android:textColor="@color/black"
-            android:textSize="15sp" />
+            android:text="Time: " />
 
         <EditText
             android:id="@+id/exam2et3"
@@ -93,54 +91,71 @@
             android:layout_marginTop="30dp"
             android:layout_marginRight="20dp"
             android:layout_weight="1"
-            android:ems="10"
-            android:hint="Enter the time when u want to study"
             android:focusable="false"
+            android:hint="Select the time of Study"
             android:inputType="textPersonName"
-            android:textSize="15dp" />
+            android:textSize="15sp" />
     </LinearLayout>
 
     <Button
         android:id="@+id/exam2but1"
+        style="@style/ButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
         android:text="ADD"
-        android:textColor="@color/black"
-        android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.108"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
 
     <LinearLayout
         android:id="@+id/linear_list"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="250dp"
         android:layout_marginTop="20dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/exam2et1" />
-
+        app:layout_constraintTop_toBottomOf="@+id/exam_date" />
 
     <Button
         android:id="@+id/exam2but2"
+        style="@style/ButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="20dp"
         android:layout_marginEnd="40dp"
         android:layout_marginRight="40dp"
+        android:layout_marginBottom="20dp"
         android:text="DONE"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.934"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:text="Exam Date"
+        style="@style/SubHeadings"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+        app:layout_constraintTop_toBottomOf="@+id/exam2tv1" />
+
+    <EditText
+        android:id="@+id/exam_date"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
+        android:hint="Select date of Exam"
+        android:inputType="textPersonName"
+        android:textSize="15sp"
+        android:focusable="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/exam2et1" />
 </androidx.constraintlayout.widget.ConstraintLayout>

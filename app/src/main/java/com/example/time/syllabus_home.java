@@ -9,8 +9,6 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.firestore.DocumentSnapshot;
@@ -18,6 +16,8 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.Arrays;
 import java.util.List;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class syllabus_home extends AppCompatActivity {
 
@@ -27,7 +27,7 @@ public class syllabus_home extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_syllabus_home);
-        final FloatingActionButton add_syll = (FloatingActionButton) findViewById(R.id.floatingActionButton);
+        final FloatingActionButton add_syll = (FloatingActionButton) findViewById(R.id.add_topic);
         final LinearLayout layout =(LinearLayout) findViewById(R.id.lay1);
 
         //get list of all subjects from db n create unique button for each subject

@@ -29,7 +29,7 @@ public class exam1 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exam1);
-        final FloatingActionButton add_sub = (FloatingActionButton) findViewById(R.id.floatingActionButton);
+        final FloatingActionButton add_sub = (FloatingActionButton) findViewById(R.id.add_topic);
         final LinearLayout layout =(LinearLayout) findViewById(R.id.lay2);
 
         //get list of all subjects from db n create unique button for each subject
