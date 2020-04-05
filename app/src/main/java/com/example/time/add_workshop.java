@@ -102,6 +102,10 @@ public class add_workshop extends AppCompatDialogFragment {
         final String desc = w_desc.getText().toString();
         final String date_time = w_date_time.getText().toString();
 
+        String split[] = date_time.split("\\s+");
+        String w_date = split[0];
+        String w_time = split[1];
+
         final FirebaseFirestore db = FirebaseFirestore.getInstance();
 
         final HashMap<String, Object> works = new HashMap<>();
@@ -109,10 +113,11 @@ public class add_workshop extends AppCompatDialogFragment {
         works.put("Title", name);
         works.put("Descp", desc);
         works.put("Location", loc);
-        works.put("Date_Time", date_time);
+        works.put("Date", w_date);
+        works.put("Time", w_time);
 
         try {
-            db.collection("users").document("user1").collection("workshop list").document(name)
+            db.collection("users").document("user3").collection("workshop list").document(name)
                     .set(works)
                     .addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override
@@ -198,7 +203,7 @@ public class add_workshop extends AppCompatDialogFragment {
                         mHour = (hourOfDay <= 12) ? hourOfDay : (hourOfDay - 12);
                         mMinute = minute;
 
-                        date_time_slct.setText(date_time + " " + mHour + ":" + mMinute);
+                        date_time_slct.setText(date_time + " " + String.format("%02d:%02d", hourOfDay, mMinute));
                     }
                 }, mHour, mMinute, false);
         timePickerDialog.show();

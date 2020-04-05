@@ -23,6 +23,7 @@ public class work_display extends AppCompatActivity {
         final TextView name =  findViewById(R.id.w_title);
         final TextView loc = findViewById(R.id.w_location);
         final TextView desc = findViewById(R.id.w_descp);
+        final TextView date = findViewById(R.id.w_date);
 
         FirebaseFirestore db = FirebaseFirestore.getInstance();
 
@@ -38,8 +39,9 @@ public class work_display extends AppCompatActivity {
                     @Override
                     public void onSuccess(DocumentSnapshot documentSnapshot) {
                         Log.d("wshop", documentSnapshot.toString());
-                        name.setText(documentSnapshot.get("Title").toString());
 
+                        name.setText(documentSnapshot.get("Title").toString());
+                        date.setText(documentSnapshot.get("Date_Time").toString());
                         loc.setText(documentSnapshot.get("Location").toString());
                         desc.setText(documentSnapshot.get("Descp").toString());
                     }

@@ -93,7 +93,6 @@ public class popup_dialog extends AppCompatDialogFragment {
                 putData(getView());
 
                 if (callBackListener != null) {
-                    getActivity().getFragmentManager().popBackStack();
                     callBackListener.onCallBack();
                 }
             }
@@ -127,11 +126,7 @@ public class popup_dialog extends AppCompatDialogFragment {
 
         final String name = w_name.getText().toString();
         final String desc = w_desc.getText().toString();
-
-        /*int date = aatdate.getDayOfMonth();
-        int month = aatdate.getMonth() + 1;
-        int year = aatdate.getYear();
-        String aat_date = date + "-" + month + '-' + year;*/
+        String a_date = aatdate.getText().toString();
 
         final FirebaseFirestore db = FirebaseFirestore.getInstance();
 
@@ -139,7 +134,7 @@ public class popup_dialog extends AppCompatDialogFragment {
 
         aat.put("Title", name);
         aat.put("Descp", desc);
-        aat.put("Date", aatdate);
+        aat.put("Date", a_date);
 
         try {
             db.collection("users").document("user1").collection("aat list").document(name)

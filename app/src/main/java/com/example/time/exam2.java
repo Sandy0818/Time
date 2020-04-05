@@ -33,11 +33,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class exam2 extends AppCompatActivity {
 
+    List<HashMap<String, Object>> exam_map  = new ArrayList<>();
     List<String> time_list = new ArrayList<>();
     List<String> task_list = new ArrayList<>();
     List<Boolean> task_state = new ArrayList<>();
     EditText exam2et3, date_disp;
     TimePickerDialog timePickerDialog;
+    LinearLayout ll;
     Calendar calendar;
     int currenthour;
     int currentminute;
@@ -55,7 +57,7 @@ public class exam2 extends AppCompatActivity {
         final EditText exam2et1 = (EditText) findViewById(R.id.exam2et1);
         final EditText exam2et2 = (EditText) findViewById(R.id.exam2et2);
         date_disp = findViewById(R.id.exam_date);
-        final LinearLayout ll = findViewById(R.id.linear_list);
+        ll = findViewById(R.id.linear_list);
         Button exam2but2 = findViewById(R.id.exam2but2);
 
         //time picker
@@ -72,13 +74,6 @@ public class exam2 extends AppCompatActivity {
                     timePickerDialog = new TimePickerDialog(exam2.this, new TimePickerDialog.OnTimeSetListener() {
                         @Override
                         public void onTimeSet(TimePicker timePicker, int hourOfDay, int minutes) {
-                        /*if(hourOfDay>=12){
-                            ampm="PM";
-                        }
-                        else
-                        {
-                            ampm="AM";
-                        }*/
                             exam2et3.setText(String.format("%02d:%02d", hourOfDay, minutes));
                         }
                     }, currenthour, currentminute, false);
@@ -97,7 +92,7 @@ public class exam2 extends AppCompatActivity {
             public void onDateSet(DatePicker view, int year, int monthOfYear,
                                   int dayOfMonth) {
                 // TODO Auto-generated method stub
-                updateLabel(dayOfMonth, monthOfYear, year);
+                updateLabel(dayOfMonth, monthOfYear + 1, year);
             }
 
         };
@@ -122,14 +117,15 @@ public class exam2 extends AppCompatActivity {
                 final String task = exam2et2.getText().toString();
                 final String time = exam2et3.getText().toString();
 
-                //Toast.makeText(getApplicationContext(), task, Toast.LENGTH_SHORT).show();
-                //Toast.makeText(getApplicationContext(), time, Toast.LENGTH_SHORT).show();
+                HashMap<String, Object> e_obj = new HashMap<>();
+                e_obj.put("Topic", task);
+                e_obj.put("Time", time);
+                e_obj.put("Checkbox State", false);
 
-                //task_list.add(task);
-                //time_list.add(time);
-                sortv(time, task);
+                sortv(time, e_obj);
                 //Toast.makeText(getApplicationContext(), "added" + time, Toast.LENGTH_SHORT).show();
-                task_state.add(false);
+
+                display_list();
 
                 exam2et2.setText("");
                 exam2et2.setHint("Enter New Task");
@@ -147,42 +143,28 @@ public class exam2 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                for (int i = 0; i < time_list.size(); i++)
-                {
-                    CheckBox cb = new CheckBox(getApplicationContext());
-                    cb.setId(i);
-                    cb.setText(time_list.get(i) + "-" + task_list.get(i));
-                    cb.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
-                    cb.setTextColor(Color.DKGRAY);
-                    cb.setChecked(task_state.get(i));
-                    //cb.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
-                    cb.setTextSize(15);
-
-                    /*if(cb.getParent() != null) {
-                        ((ViewGroup)cb.getParent()).removeView(cb); // <- fix
-                    }*/
-
-                    ll.addView(cb);
-                }
+                display_list();
 
                 final String exam_sub = exam2et1.getText().toString();
-                final String topic_time = exam2et3.getText().toString();
+                //final String topic_time = exam2et3.getText().toString();
                 final String exam_date = date_disp.getText().toString();
 
                 HashMap<String, Object> exams = new HashMap<>();
                 exams.put("exam subject", exam_sub);
                 exams.put("exam date", exam_date);
-                exams.put("tasks", task_list);
-                exams.put("time", time_list);
-                exams.put("checkbox state", task_state);
+                exams.put("details", exam_map);
+                //exams.put("tasks", task_list);
+                //exams.put("time", time_list);
+                //exams.put("checkbox state", task_state);
 
+                Log.d("EXAMS", "added - " + exams.toString());
 
                 db.collection("users").document("user1").collection("exams list").document(exam_sub)
                         .set(exams)
                         .addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void aVoid) {
-                                Toast.makeText(getApplicationContext(), "DocumentSnapshot successfully written " + task_list, Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getApplicationContext(), "DocumentSnapshot successfully written ", Toast.LENGTH_SHORT).show();
                             }
                         })
                         .addOnFailureListener(new OnFailureListener() {
@@ -232,21 +214,23 @@ public class exam2 extends AppCompatActivity {
     }
 
 
-    public void sortv(String value, String task)
+    public void sortv(String value, HashMap<String, Object> ex)
     {
         Toast.makeText(getApplicationContext(), time_list.toString(), Toast.LENGTH_SHORT).show();
         Log.d("EXAMS", time_list.toString());
 
         int i;
-        for(i = 0; i < time_list.size(); i++)
-            if (time_list.get(i).compareTo(value) > 0)
+        for(i = 0; i < exam_map.size(); i++)
+        {
+            HashMap<String, Object> temp = exam_map.get(i);
+            if (temp.get("Time").toString().compareTo(value) > 0)
                 break;
-        time_list.add(i,value);
-        task_list.add(i, task);
+        }
+
+        exam_map.add(i, ex);
 
         Toast.makeText(getApplicationContext(), "added" + value, Toast.LENGTH_SHORT).show();
-        Log.d("EXAMS", "added - " + time_list.toString());
-        Log.d("EXAMS", "added - " + task_list.toString());
+        Log.d("EXAMS", "added - " + exam_map.toString());
 
     }
 
@@ -254,6 +238,33 @@ public class exam2 extends AppCompatActivity {
     {
         String slc_date = date + "-" + month + "-" + yr;
         date_disp.setText(slc_date);
+    }
+
+    private void display_list()
+    {
+
+        if(ll.getChildCount() > 0)
+            ll.removeAllViews();
+
+
+        for (int i = 0; i < exam_map.size(); i++)
+        {
+            CheckBox cb = new CheckBox(getApplicationContext());
+            cb.setId(i);
+            HashMap<String,Object> temp = exam_map.get(i);
+
+            Log.d("EXAMS", temp.toString());
+
+            cb.setText(temp.get("Time") + " - " + temp.get("Topic"));
+
+            cb.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+            cb.setTextColor(Color.DKGRAY);
+            cb.setChecked((Boolean) temp.get("Checkbox State"));
+            //cb.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+            cb.setTextSize(15);
+
+            ll.addView(cb);
+        }
     }
 
 }

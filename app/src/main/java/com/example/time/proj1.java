@@ -47,7 +47,9 @@ public class proj1 extends AppCompatActivity implements CallBackListener {
         add_exam.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openProject();
+                //openProject();
+                Intent intent = new Intent(proj1.this, proj2.class);
+                startActivity(intent);
 
             }
         });
