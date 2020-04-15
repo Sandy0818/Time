@@ -40,10 +40,11 @@ public class work_display extends AppCompatActivity {
                     public void onSuccess(DocumentSnapshot documentSnapshot) {
                         Log.d("wshop", documentSnapshot.toString());
 
-                        name.setText(documentSnapshot.get("Title").toString());
-                        date.setText(documentSnapshot.get("Date_Time").toString());
-                        loc.setText(documentSnapshot.get("Location").toString());
-                        desc.setText(documentSnapshot.get("Descp").toString());
+                        name.setText(documentSnapshot.get("title").toString());
+                        date.setText(documentSnapshot.get("date").toString());
+                        date.setText(documentSnapshot.get("time").toString());
+                        loc.setText(documentSnapshot.get("location").toString());
+                        desc.setText(documentSnapshot.get("desc").toString());
                     }
                 });
     }

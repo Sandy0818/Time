@@ -110,11 +110,11 @@ public class add_workshop extends AppCompatDialogFragment {
 
         final HashMap<String, Object> works = new HashMap<>();
 
-        works.put("Title", name);
-        works.put("Descp", desc);
-        works.put("Location", loc);
-        works.put("Date", w_date);
-        works.put("Time", w_time);
+        works.put("title", name);
+        works.put("descp", desc);
+        works.put("location", loc);
+        works.put("date", w_date);
+        works.put("time", w_time);
 
         try {
             db.collection("users").document("user3").collection("workshop list").document(name)

@@ -16,8 +16,7 @@
         android:layout_marginEnd="20dp"
         android:layout_marginRight="20dp"
         android:text="PROJECT PLANNER"
-        android:textColor="#300C88"
-        android:textSize="20dp"
+        style="@style/ActivityHeadings"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -45,7 +44,8 @@
         android:layout_marginRight="40dp"
         android:layout_marginBottom="40dp"
         android:clickable="true"
+        android:src="@drawable/ic_add_black_24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="?attr/colorAccent" />
+        app:srcCompat="@color/colorAccent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

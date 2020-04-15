@@ -24,20 +24,44 @@ public class exam1 extends AppCompatActivity {
 
     List<String> items;
     TextView textView;
+    LinearLayout layout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exam1);
-        final FloatingActionButton add_sub = (FloatingActionButton) findViewById(R.id.add_topic);
-        final LinearLayout layout =(LinearLayout) findViewById(R.id.lay2);
+        final FloatingActionButton add_sub = findViewById(R.id.add_topic);
+        layout  = findViewById(R.id.lay2);
 
-        //get list of all subjects from db n create unique button for each subject
-        //Button new_syll = (Button) findViewById(R.id.syll_button);
+        getFromDB();
+
+        add_sub.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), exam2.class);
+                startActivityForResult(intent, 1);
+            }
+        });
+
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data)
+    {
+        super.onActivityResult(requestCode, resultCode, data);
+        Toast.makeText(this, "Callback from exam2", Toast.LENGTH_SHORT).show();
+        if (resultCode == RESULT_OK && requestCode == 1)
+        {
+            getFromDB();
+        }
+    }
+
+    private void getFromDB()
+    {
 
         final FirebaseFirestore db = FirebaseFirestore.getInstance();
 
-        db.collection("users").document("user1").collection("Title").document("Title_d")
+        db.collection("users").document("user3").collection("Title").document("Title_d")
                 .get()
                 .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
 
@@ -52,9 +76,13 @@ public class exam1 extends AppCompatActivity {
                             for (int i = 0; i < items.size(); i++)
                                 Log.d("TAG", items.get(i));
 
+                            if(layout.getChildCount() > 0)
+                                layout.removeAllViews();
+
                             int len = items.size();
                             Log.d("TAG", String.valueOf(len));
-                            for (int i = 0; i < len; i++) {
+                            for (int i = 0; i < len; i++)
+                            {
                                 //Toast.makeText(getApplicationContext(), "inside for loop", Toast.LENGTH_SHORT).show();
                                 //Toast.makeText(getApplicationContext(), items.get(i), Toast.LENGTH_SHORT).show();
                                 Button button = new Button(getApplicationContext());
@@ -65,12 +93,10 @@ public class exam1 extends AppCompatActivity {
                                 layout.addView(button);
 
                                 button.setOnClickListener(buttonClick);
-                            }}catch(Exception e){}
+                            }
+                        }
+                        catch(Exception e){}
 
-                                              /*Log.d("BUTTON", "changing gravity of fab");
-                                              LinearLayout.LayoutParams lp = (LinearLayout.LayoutParams) add_syll.getLayoutParams();
-                                              lp.gravity = Gravity.BOTTOM | GravityCompat.END;
-                                              add_syll.setLayoutParams(lp);*/
                     }
 
 
@@ -86,31 +112,6 @@ public class exam1 extends AppCompatActivity {
                         }
                     };
                 });
-        /*for(int i = 0; i < items.size(); i++)
-        {
-            Button button =new Button(this);
-            button.setId(i);
-            button.setText(items.get(i));
-        }*/
-
-        add_sub.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), exam2.class);
-                startActivity(intent);
-            }
-        });
-
-       /* new_syll.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //send subject name as extra data to activity
-                Intent intent = new Intent(getApplicationContext(), view_syllabus.class);
-                startActivity(intent);
-            }
-        });*/
-
-
     }
 
 }

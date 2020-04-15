@@ -132,12 +132,12 @@ public class popup_dialog extends AppCompatDialogFragment {
 
         final HashMap<String, Object> aat = new HashMap<>();
 
-        aat.put("Title", name);
-        aat.put("Descp", desc);
-        aat.put("Date", a_date);
+        aat.put("title", name);
+        aat.put("desc", desc);
+        aat.put("date", a_date);
 
         try {
-            db.collection("users").document("user1").collection("aat list").document(name)
+            db.collection("users").document("user3").collection("aat list").document(name)
                     .set(aat)
                     .addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override
@@ -148,16 +148,48 @@ public class popup_dialog extends AppCompatDialogFragment {
                         }
                     });
 
-            db.collection("users").document("user1").collection("Title").document("Title_d")
+            db.collection("users").document("user3").collection("Title").document("Title_d")
                     .get()
                     .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
                         @Override
                         public void onSuccess(DocumentSnapshot documentSnapshot) {
                             //String wshop_list = "";
                             String aat_list = (String) documentSnapshot.get("AAT");
+                            Map<String, Object> aat_obj = new HashMap<>();
                             //Toast.makeText(, aat_list.toString(), Toast.LENGTH_LONG).show();
 
-                            if(!aat_list.equals(null)) {
+                            if(aat_list == null || aat_list.isEmpty())
+                            {
+                                aat_list = name;
+                                aat_obj.put("AAT", aat_list);
+
+                                db.collection("users").document("user3").collection("Title").document("Title_d")
+                                        .set(aat_obj)
+                                        .addOnSuccessListener(new OnSuccessListener<Void>() {
+                                            @Override
+                                            public void onSuccess(Void aVoid) {
+                                                //Toast.makeText(getApplicationContext(), "Updated subject title list", Toast.LENGTH_SHORT).show();
+                                            }
+                                        });
+                            }
+
+                            else
+                            {
+                                aat_list = aat_list.concat(", " + name);
+
+                                aat_obj.put("AAT", aat_list);
+
+                                db.collection("users").document("user3").collection("Title").document("Title_d")
+                                        .update(aat_obj)
+                                        .addOnSuccessListener(new OnSuccessListener<Void>() {
+                                            @Override
+                                            public void onSuccess(Void aVoid) {
+                                                //Toast.makeText(getApplicationContext(), "Updated subject title list", Toast.LENGTH_SHORT).show();
+                                            }
+                                        });
+                            }
+
+                            /*if(!aat_list.equals(null)) {
                                 aat_list = aat_list.concat(", " + name);
                             }
                             else
@@ -166,14 +198,14 @@ public class popup_dialog extends AppCompatDialogFragment {
                             Map<String, Object> work_list = new HashMap<>();
                             work_list.put("AAT", aat_list);
 
-                            db.collection("users").document("user1").collection("Title").document("Title_d")
+                            db.collection("users").document("user3").collection("Title").document("Title_d")
                                     .update(work_list)
                                     .addOnSuccessListener(new OnSuccessListener<Void>() {
                                         @Override
                                         public void onSuccess(Void aVoid) {
 
                                         }
-                                    });
+                                    });*/
                         }
                     });
         }

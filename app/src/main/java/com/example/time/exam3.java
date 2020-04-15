@@ -69,7 +69,7 @@ public class exam3 extends AppCompatActivity {
 
             final FirebaseFirestore db = FirebaseFirestore.getInstance();
 
-        db.collection("users").document("user1").collection("exams list").document(sub)
+        db.collection("users").document("user3").collection("exams list").document(sub)
                 .get()
                 .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
             @Override
@@ -86,7 +86,8 @@ public class exam3 extends AppCompatActivity {
 
                 display_checklist();
 
-                Toast.makeText(getApplicationContext(), exam_map.toString(), Toast.LENGTH_SHORT).show();
+
+                //Toast.makeText(getApplicationContext(), exam_map.toString(), Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -102,10 +103,10 @@ public class exam3 extends AppCompatActivity {
                         CheckBox cb = (CheckBox) linearLayout.getChildAt(i);
 
                         if(cb.isChecked())
-                            exam_map.get(i).replace("Checkbox State", true);
+                            exam_map.get(i).replace("checkbox state", true);
                             //status.set(i, true);
                         else
-                            exam_map.get(i).replace("Checkbox State", false);
+                            exam_map.get(i).replace("checkbox state", false);
                             //status.set(i, false);
                     }
 
@@ -114,7 +115,7 @@ public class exam3 extends AppCompatActivity {
                     HashMap<String, Object> data = new HashMap<>();
                     data.put("details", exam_map);
 
-                    db.collection("users").document("user1").collection("exams list").document(sub)
+                    db.collection("users").document("user3").collection("exams list").document(sub)
                             .update(data)
                             .addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override
@@ -184,9 +185,9 @@ public class exam3 extends AppCompatActivity {
                             Log.d("exam", topic_name + " : " + topic_time);
 
                             HashMap<String, Object> temp = new HashMap<>();
-                            temp.put("Topic", topic_name);
-                            temp.put("Time", topic_time);
-                            temp.put("Checkbox State", false);
+                            temp.put("topic", topic_name);
+                            temp.put("time", topic_time);
+                            temp.put("checkbox state", false);
 
                             sortv(topic_time, temp);
                             display_checklist();
@@ -210,11 +211,11 @@ public class exam3 extends AppCompatActivity {
         public boolean onLongClick(View v) {
 
             final int cb_no = v.getId();
-            Log.d("exam", topic_list.get(cb_no));
-            Log.d("exam", time_list.get(cb_no));
+            //Log.d("exam", topic_list.get(cb_no));
+            Log.d("exam", exam_map.get(cb_no).toString());
 
             AlertDialog.Builder builder1 = new AlertDialog.Builder(exam3.this);
-            builder1.setMessage("Are you sure you want to delete - \n" + topic_list.get(cb_no) + " : " + time_list.get(cb_no));
+            builder1.setMessage("Are you sure you want to delete - \n" + exam_map.get(cb_no).get("topic") + " : " + exam_map.get(cb_no).get("time"));
             builder1.setCancelable(true);
 
             builder1.setPositiveButton(
@@ -224,8 +225,8 @@ public class exam3 extends AppCompatActivity {
                             dialog.cancel();
                             //remove from arraylists and display checklists again
 
-                            topic_list.remove(cb_no);
-                            time_list.remove(cb_no);
+                            //topic_list.remove(cb_no);
+                            exam_map.remove(cb_no);
                             Toast.makeText(exam3.this, "Item successfully deleted", Toast.LENGTH_SHORT).show();
                             display_checklist();
                         }
@@ -261,10 +262,10 @@ public class exam3 extends AppCompatActivity {
 
             Log.d("EXAMS", temp.toString());
 
-            cb.setText(temp.get("Time") + " - " + temp.get("Topic"));
+            cb.setText(temp.get("time") + " - " + temp.get("topic"));
 
             //set the checked value based on what is stored in db
-            if((Boolean) temp.get("Checkbox State") == true)
+            if((Boolean) temp.get("checkbox state"))
                 cb.setChecked(true);
             else
                 cb.setChecked(false);
@@ -282,22 +283,22 @@ public class exam3 extends AppCompatActivity {
 
     public void sortv(String value, HashMap<String, Object> new_ex)
     {
-       // Toast.makeText(getApplicationContext(), time_list.toString(), Toast.LENGTH_SHORT).show();
+       //Toast.makeText(getApplicationContext(), time_list.toString(), Toast.LENGTH_SHORT).show();
         Log.d("EXAMS", exam_map.toString());
 
         int i;
         for(i = 0; i < exam_map.size(); i++)
         {
             HashMap<String, Object> temp = exam_map.get(i);
-            if (temp.get("Time").toString().compareTo(value) > 0)
+            if (temp.get("time").toString().compareTo(value) > 0)
                 break;
         }
 
         exam_map.add(i, new_ex);
 
         Toast.makeText(getApplicationContext(), "added" + value, Toast.LENGTH_SHORT).show();
-        Log.d("EXAMS", "added - " + time_list.toString());
-        Log.d("EXAMS", "added - " + topic_list.toString());
+        //Log.d("EXAMS", "added - " + time_list.toString());
+        //Log.d("EXAMS", "added - " + topic_list.toString());
 
     }
 }

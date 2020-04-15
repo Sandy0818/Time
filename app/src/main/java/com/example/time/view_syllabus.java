@@ -1,7 +1,7 @@
 package com.example.time;
 
+import android.annotation.TargetApi;
 import android.graphics.Color;
-import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -11,24 +11,26 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.RequiresApi;
-import androidx.appcompat.app.AppCompatActivity;
-
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
+import androidx.appcompat.app.AppCompatActivity;
+
+@TargetApi(24)
 public class view_syllabus extends AppCompatActivity {
 
     String sub = "";                    //read subject from db or get it from calling subject
     ArrayList<String> topic_list = new ArrayList<>();       //read lest of topics of given subject from db
     ArrayList<Boolean> status = new ArrayList<>();
+    List<HashMap<String, Object>> syll_list = new ArrayList<>();
     Bundle extras;
+    HashMap<String, Object> temp;
 
-    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR1)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,23 +56,27 @@ public class view_syllabus extends AppCompatActivity {
 
         final FirebaseFirestore db = FirebaseFirestore.getInstance();
 
-        db.collection("users").document("user1").collection("syllabus list").document(sub)
+        db.collection("users").document("user4").collection("syllabus list").document(sub)
                 .get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
             @Override
             public void onSuccess(DocumentSnapshot documentSnapshot) {
                 Toast.makeText(getApplicationContext(), "Read document", Toast.LENGTH_SHORT).show();
-                topic_list = (ArrayList<String>) documentSnapshot.get("topics");
-                status = (ArrayList<Boolean>) documentSnapshot.get("checkbox state");
-                Log.d("SYLLABUS", topic_list.toString());
+                //topic_list = (ArrayList<String>) documentSnapshot.get("topics");
+                //status = (ArrayList<Boolean>) documentSnapshot.get("checkbox state");
 
-                for(int i = 0; i < topic_list.size(); i++)
+                syll_list = (ArrayList<HashMap<String, Object>>) documentSnapshot.get("syll_list");
+                Log.d("SYLLABUS", syll_list.toString() + syll_list.size());
+
+                for(int i = 0; i < syll_list.size(); i++)
                 {
                     CheckBox cb = new CheckBox(getApplicationContext());
-                    cb.setText(topic_list.get(i));
+                    temp = syll_list.get(i);
+
                     cb.setId(i);
+                    cb.setText(temp.get("Topic").toString());
 
                     //set the checked value based on what is stored in db
-                    if(status.get(i) == true)
+                    if((Boolean) temp.get("Checkbox State"))
                         cb.setChecked(true);
                     else
                         cb.setChecked(false);
@@ -98,24 +104,26 @@ public class view_syllabus extends AppCompatActivity {
                     CheckBox cb = (CheckBox) linearLayout.getChildAt(i);
 
                     if(cb.isChecked())
-                        status.set(i, true);
+                        syll_list.get(i).replace("Checkbox State", true);
+                        //status.set(i, true);
                     else
-                        status.set(i, false);
+                        syll_list.get(i).replace("Checkbox State", false);
+                        //status.set(i, false);
                 }
 
-                Log.d("SYLLABUS", status.toString());
-                Log.d("SYLLABUS", topic_list.toString());
+                Log.d("SYLLABUS", syll_list.toString());
+               // Log.d("SYLLABUS", topic_list.toString());
 
                 HashMap<String, Object> data = new HashMap<>();
-                data.put("checkbox state", status);
-                data.put("topics", topic_list);
+                data.put("syll_list", syll_list);
+                //data.put("topics", topic_list);
 
-                db.collection("users").document("user1").collection("syllabus list").document(sub)
+                db.collection("users").document("user4").collection("syllabus list").document(sub)
                         .update(data)
                         .addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void aVoid) {
-                                Toast.makeText(getApplicationContext(), "Syllabus updated", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getApplicationContext(), "Syllabus updated Successfully", Toast.LENGTH_SHORT).show();
                             }
                         });
             }

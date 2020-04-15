@@ -32,16 +32,16 @@ public class aat_display extends AppCompatActivity {
         else
             aat = (String) extras.get("AAT_name");
 
-        db.collection("users").document("user1").collection("aat list").document(aat)
+        db.collection("users").document("user3").collection("aat list").document(aat)
                 .get()
                 .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
                     @Override
                     public void onSuccess(DocumentSnapshot documentSnapshot) {
                         Log.d("AAT", documentSnapshot.toString());
-                        name.setText(documentSnapshot.get("Title").toString());
+                        name.setText(documentSnapshot.get("title").toString());
 
-                        date.setText(documentSnapshot.get("Date").toString());
-                        desc.setText(documentSnapshot.get("Descp").toString());
+                        date.setText(documentSnapshot.get("date").toString());
+                        desc.setText(documentSnapshot.get("desc").toString());
                     }
                 });
     }

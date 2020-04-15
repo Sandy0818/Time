@@ -1,7 +1,9 @@
 package com.example.time;
 
+import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
+import android.content.DialogInterface;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
@@ -13,7 +15,6 @@ import android.widget.CheckBox;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.LinearLayout;
-import android.widget.TimePicker;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
@@ -21,8 +22,11 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -32,18 +36,23 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class proj2 extends AppCompatActivity {
-    List<HashMap<String, Object>> myMap  = new ArrayList<>();
+    List<HashMap<String, Object>> myMap1 = new ArrayList<>();
+    HashMap<String, Object> dexa1 = new HashMap<>();
+    String proj_name;
     //List<String> time_list = new ArrayList<>();
     // List<String> task_list = new ArrayList<>();
     // List<Boolean> task_state = new ArrayList<>();
-    Boolean task_state = false;
-    EditText exam2et3, date_disp;
-    TimePickerDialog timePickerDialog;
+    String la,le;
+    Boolean phase_state = false;
+    EditText p2et3, date_disp1;
+    TimePickerDialog timePickerDialog1;
+    DatePickerDialog.OnDateSetListener setListener;
     LinearLayout ll;
     Calendar calendar;
     int currenthour;
     int currentminute;
-
+    String ampm;
+    final FirebaseFirestore db = FirebaseFirestore.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,27 +60,27 @@ public class proj2 extends AppCompatActivity {
         setContentView(R.layout.activity_proj2);
 
         //public class syllabus extends AppCompatActivity {
-        final FirebaseFirestore db = FirebaseFirestore.getInstance();
+        //final FirebaseFirestore db = FirebaseFirestore.getInstance();
 
-        Button exam2but1 = (Button) findViewById(R.id.exam2but1);
-        final EditText exam2et1 = (EditText) findViewById(R.id.exam2et1);
-        final EditText exam2et2 = (EditText) findViewById(R.id.exam2et2);
-        date_disp = findViewById(R.id.exam_date);
+        Button p2but1 = (Button) findViewById(R.id.p2but1);
+        final EditText p2et1 = (EditText) findViewById(R.id.p2et1);
+        final EditText p2et2 = (EditText) findViewById(R.id.p2et2);
+        date_disp1 = findViewById(R.id.p_date);
         ll = findViewById(R.id.linear_list);
-        Button exam2but2 = findViewById(R.id.exam2but2);
+        Button p2but2 = findViewById(R.id.p2but2);
 
-        //time picker
-        exam2et3 = findViewById(R.id.exam2et3);
+        //date picker
+        p2et3 = findViewById(R.id.p2et3);
 
-        try {
-            exam2et3.setOnClickListener(new View.OnClickListener() {
+       /* try {
+            p2et3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     calendar = Calendar.getInstance();
                     currenthour = calendar.get(Calendar.HOUR_OF_DAY);
                     currentminute = calendar.get(Calendar.MINUTE);
 
-                    timePickerDialog = new TimePickerDialog(proj2.this, new TimePickerDialog.OnTimeSetListener() {
+                    timePickerDialog = new TimePickerDialog(exam2.this, new TimePickerDialog.OnTimeSetListener() {
                         @Override
                         public void onTimeSet(TimePicker timePicker, int hourOfDay, int minutes) {
                             exam2et3.setText(String.format("%02d:%02d", hourOfDay, minutes));
@@ -82,7 +91,7 @@ public class proj2 extends AppCompatActivity {
 
             });
         } catch (Exception e) {
-        }
+        }*/
 
         final Calendar myCalendar = Calendar.getInstance();
 
@@ -92,12 +101,12 @@ public class proj2 extends AppCompatActivity {
             public void onDateSet(DatePicker view, int year, int monthOfYear,
                                   int dayOfMonth) {
                 // TODO Auto-generated method stub
-                updateLabel(dayOfMonth, monthOfYear, year);
+                updateLabel(dayOfMonth, monthOfYear + 1, year);
             }
 
         };
 
-        date_disp.setOnClickListener(new View.OnClickListener() {
+        date_disp1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 new DatePickerDialog(proj2.this, date, myCalendar
@@ -105,46 +114,68 @@ public class proj2 extends AppCompatActivity {
                         myCalendar.get(Calendar.DAY_OF_MONTH)).show();
             }
         });
+        final Calendar myCalendar1 = Calendar.getInstance();
+
+        //EditText edittext= (EditText) findViewById(R.id.Birthday);
+        final DatePickerDialog.OnDateSetListener date1 = new DatePickerDialog.OnDateSetListener() {
+
+            @Override
+            public void onDateSet(DatePicker view1, int year1, int monthOfYear1,
+                                  int dayOfMonth1) {
+                // TODO Auto-generated method stub
+                myCalendar1.set(Calendar.YEAR, year1);
+                myCalendar1.set(Calendar.MONTH, monthOfYear1+1);
+                myCalendar1.set(Calendar.DAY_OF_MONTH, dayOfMonth1);
+
+                updateLabel1(dayOfMonth1, monthOfYear1 + 1, year1);
+            }
+
+        };
+
+        p2et3.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                new DatePickerDialog(proj2.this, date1, myCalendar1
+                        .get(Calendar.YEAR), myCalendar1.get(Calendar.MONTH),
+                        myCalendar1.get(Calendar.DAY_OF_MONTH)).show();
+            }
+        });
 
         //Toast.makeText(this, topic, Toast.LENGTH_SHORT).show();
 
 
         //adding new topic
-        exam2but1.setOnClickListener(new View.OnClickListener() {
+        p2but1.setOnClickListener(new View.OnClickListener() {
             @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR1)
             @Override
             public void onClick(View view) {
-                final String task = exam2et2.getText().toString();
-                final String time = exam2et3.getText().toString();
+                final String phase = p2et2.getText().toString();
+                final String date = p2et3.getText().toString();
 
-                HashMap<String, Object> dexa = new HashMap<>();
-                dexa.put("topic",task);
-                dexa.put("Time",time);
-                dexa.put("checkbox state", false);
+                dexa1 = new HashMap<>();
+                dexa1.put("phase",phase);
+                dexa1.put("date",date);
+                dexa1.put("checkbox state", false);
 
-                //myMap.add(dexa);
-                //exams.put("details",myMap);
-                //Toast.makeText(getApplicationContext(), task, Toast.LENGTH_SHORT).show();
-                //Toast.makeText(getApplicationContext(), time, Toast.LENGTH_SHORT).show();
+                try {
+                    sortv(date, phase, dexa1);
+                }
+                catch (Exception e){}
 
-                //task_list.add(task);
-                //time_list.add(time);
-                //Toast.makeText(getApplicationContext(), "added" + time, Toast.LENGTH_SHORT).show();
-                //task_state.add(false);
-
-                sortv(time, task, dexa);
                 display_list();
 
-                exam2et2.setText("");
-                exam2et2.setHint("Enter New Task");
+                p2et2.setText("");
+                //exam2et2.setHint("Enter New Task");
 
-                exam2et3.setText("");
-                exam2et3.setHint("Enter the time you wanna study the topic");
+                p2et3.setText("");
+                //exam2et3.setHint("Enter the time you wanna study the topic");
 
             }
         });
 
-        exam2but2.setOnClickListener(new View.OnClickListener() {
+        p2but2.setOnClickListener(new View.OnClickListener() {
 
 
             // @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR1)
@@ -153,13 +184,13 @@ public class proj2 extends AppCompatActivity {
 
                 //display_list();
 
-                final String exam_sub = exam2et1.getText().toString();
+                proj_name = p2et1.getText().toString();
                 //final String topic_time = exam2et3.getText().toString();
-                final String exam_date = date_disp.getText().toString();
-                HashMap<String, Object> exams = new HashMap<>();
-                exams.put("exam subject", exam_sub);
-                exams.put("exam date", exam_date);
-                exams.put("details", myMap);
+                final String proj_date = date_disp1.getText().toString();
+                HashMap<String, Object> projs = new HashMap<>();
+                projs.put("project name", proj_name);
+                projs.put("project date", proj_date);
+                projs.put("details", myMap1);
 
                 //HashMap<String, Object> exams = new HashMap<>();
                 //exams.put("exam subject", exam_sub);
@@ -168,10 +199,10 @@ public class proj2 extends AppCompatActivity {
                 //exams.put("time", time_list);
                 //exams.put("checkbox state", task_state);
 
-                Log.d("EXAMS", "added - " + exams.toString());
+                Log.d("PROJECTS", "added - " + projs.toString());
 
-                db.collection("users").document("user1").collection("Projects list").document(exam_sub)
-                        .set(exams)
+                db.collection("users").document("user3").collection("Projects list").document(proj_name)
+                        .set(projs)
                         .addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void aVoid) {
@@ -185,26 +216,26 @@ public class proj2 extends AppCompatActivity {
                             }
                         });
 
-                db.collection("users").document("user1").collection("Title").document("Title_d")
+                db.collection("users").document("user3").collection("Title").document("Title_d")
                         .get()
                         .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
                             @Override
                             public void onSuccess(DocumentSnapshot documentSnapshot) {
                                 try{
-                                    String exam_list = (String) documentSnapshot.get("Projects");
+                                    String proj_list = (String) documentSnapshot.get("Projects");
                                     //Toast.makeText(, aat_list.toString(), Toast.LENGTH_LONG).show();
 
-                                    if(exam_list == null || exam_list.isEmpty())
-                                        exam_list = exam_sub;
+                                    if(proj_list == null || proj_list.isEmpty())
+                                        proj_list = proj_name;
                                     else
-                                        exam_list = exam_list.concat(", " + exam_sub);
+                                        proj_list = proj_list.concat(", " + proj_name);
 
-                                    Map<String, Object> subj = new HashMap<>();
-                                    subj.put("Exams", exam_list);
+                                    Map<String, Object> name = new HashMap<>();
+                                    name.put("Projects", proj_list);
 
-                                    final String finalExam_list = exam_list;
-                                    db.collection("users").document("user1").collection("Title").document("Title_d")
-                                            .update(subj)
+                                    final String finalproj_list = proj_list;
+                                    db.collection("users").document("user3").collection("Title").document("Title_d")
+                                            .update(name)
                                             .addOnSuccessListener(new OnSuccessListener<Void>() {
                                                 @Override
                                                 public void onSuccess(Void aVoid) {
@@ -225,30 +256,43 @@ public class proj2 extends AppCompatActivity {
     }
 
 
-    public void sortv(String value, String task,Object dexa) {
-        Toast.makeText(getApplicationContext(), value, Toast.LENGTH_SHORT).show();
-        Log.d("EXAMS", value + " " + task + " size = " + myMap.size());
+    public void sortv(String value1, String task1, Object dexa1) throws ParseException{
+        int i = 0;
+        Toast.makeText(getApplicationContext(), value1, Toast.LENGTH_SHORT).show();
+        Log.d("proj", value1 + " " + task1 + " size = " + myMap1.size());
 
-        int i;
-        for(i = 0; i < myMap.size(); i++) {
-            //for (HashMap<String, Object> map : myMap) {
-            Map<String, Object> moo1 = myMap.get(i);
-            if (moo1.get("Time").toString().compareTo(value) > 0)
-                break;
-        }
+            SimpleDateFormat sobj = new SimpleDateFormat("dd-MM-yyyy");// format specified in double quotes
+            Date d1, d2 = sobj.parse(value1);
 
-        myMap.add(i,(HashMap<String, Object>) dexa);
-            //time_list.add(i,value);
-            //task_list.add(i, task);
+            for(i = 0; i < myMap1.size(); i++)
+            {
 
-            Toast.makeText(getApplicationContext(), "added" + value, Toast.LENGTH_SHORT).show();
-            Log.d("EXAMS", "added - " + myMap.toString());
-        }
+                Map<String, Object> p_obj = myMap1.get(i);
+
+                Log.d("proj", p_obj.get("date").toString());
+
+                d1 = sobj.parse( p_obj.get("date").toString());
+                Log.d("proj", d1 + "\n" + d2);
+
+                if(d2.before(d1))
+                    break;
+            }
+
+        myMap1.add(i, (HashMap<String, Object>) dexa1);
+        //time_list.add(i,value);
+        //task_list.add(i, task);
+
+        Toast.makeText(getApplicationContext(), "added" + value1, Toast.LENGTH_SHORT).show();
+        Log.d("proj", "added - " + myMap1.toString());
+    }
 
     private void updateLabel( int date, int month, int yr)
     {
-        String slc_date = date + "-" + month + "-" + yr;
-        date_disp.setText(slc_date);
+        date_disp1.setText(String.format("%02d-%02d-%04d", date, month, yr));
+    }
+    private void updateLabel1(int date, int month, int yr)
+    {
+        p2et3.setText(String.format("%02d-%02d-%04d", date, month, yr));
     }
 
     public void display_list()
@@ -258,21 +302,64 @@ public class proj2 extends AppCompatActivity {
             ll.removeAllViews();
 
 
-        for (int i = 0; i < myMap.size(); i++) {
+        for (int i = 0; i < myMap1.size(); i++) {
             CheckBox cb = new CheckBox(getApplicationContext());
             cb.setId(i);
-            HashMap<String,Object> moo = myMap.get(i);
+            HashMap<String,Object> moo111 = myMap1.get(i);
 
-            Log.d("EXAMS", moo.toString());
+            Log.d("proj", moo111.toString());
 
-            cb.setText(moo.get("Time") + " - " + moo.get("topic"));
+            cb.setText(moo111.get("date") + " - " + moo111.get("phase"));
             cb.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
             cb.setTextColor(Color.DKGRAY);
-            cb.setChecked((Boolean) moo.get("checkbox state"));
+            cb.setChecked((Boolean) moo111.get("checkbox state"));
             //cb.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
             cb.setTextSize(15);
-
+            cb.setOnLongClickListener(add_desc);
             ll.addView(cb);
         }
     }
+
+    View.OnLongClickListener add_desc = new View.OnLongClickListener() {
+        @Override
+        public boolean onLongClick(View v) {
+            final int cb_no = v.getId();
+            Log.d("projects", myMap1.get(cb_no).toString());
+            //Log.d("exam", time_list.get(cb_no));
+            final HashMap<String,Object> moo = myMap1.get(cb_no);
+
+            final String p_phase = (String) moo.get("phase");
+            String p_date = (String) moo.get("date");
+
+            AlertDialog.Builder builder1 = new AlertDialog.Builder(proj2.this);
+            builder1.setTitle(p_phase + " DESCRIPTION");
+            builder1.setCancelable(true);
+            final EditText input = new EditText(proj2.this);
+            input.setHint("Enter description for given phase");
+            builder1.setView(input);
+
+            builder1.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.cancel();
+                    String p_desc = input.getText().toString();
+                    Log.d("projects", p_desc);
+
+                    moo.put("desc", p_desc);
+                    myMap1.set(cb_no, moo);
+                    Log.d("projects", myMap1.toString());
+                }
+            }).setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.cancel();
+                }
+            });
+
+            AlertDialog alert11 = builder1.create();
+            alert11.show();
+
+            return true;
+        }
+    };
 }

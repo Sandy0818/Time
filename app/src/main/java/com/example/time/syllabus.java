@@ -3,6 +3,7 @@ package com.example.time;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -10,10 +11,6 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Toast;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.RequiresApi;
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -25,11 +22,17 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AppCompatActivity;
+
 
 public class syllabus extends AppCompatActivity {
 
     List<String> topic_list = new ArrayList<>();
     List<Boolean> topic_state = new ArrayList<>();
+    List<HashMap<String, Object>> syll_list = new ArrayList<>();
+    HashMap<String, Object> temp = new HashMap<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,8 +56,14 @@ public class syllabus extends AppCompatActivity {
                 final String topic = edit_topic.getText().toString();
                 Toast.makeText(getApplicationContext(), topic, Toast.LENGTH_SHORT).show();
 
-                topic_list.add(topic);
-                topic_state.add(false);
+                temp = new HashMap<>();
+                temp.put("topic", topic);
+                temp.put("checkbox state", false);
+
+                syll_list.add(temp);
+
+                //topic_list.add(topic);
+                //topic_state.add(false);
 
                 CheckBox cb = new CheckBox(getApplicationContext());
                 cb.setText(topic);
@@ -80,17 +89,18 @@ public class syllabus extends AppCompatActivity {
                 final String syll_title = sub_title.getText().toString();
 
                 syllabus.put("title", syll_title);
-                syllabus.put("topics", topic_list);
-                syllabus.put("checkbox state", topic_state);
+                syllabus.put("syll_list", syll_list);
 
+                Log.d("SYLLABUS", syllabus.toString());
+                //syllabus.put("topics", topic_list);
+                //syllabus.put("checkbox state", topic_state);
 
-
-                db.collection("users").document("user1").collection("syllabus list").document(syll_title)
+                db.collection("users").document("user4").collection("syllabus list").document(syll_title)
                         .set(syllabus)
                         .addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void aVoid) {
-                                //Toast.makeText(getApplicationContext(), "DocumentSnapshot successfully written " + topic_list, Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getApplicationContext(), "Syllabus successfully added", Toast.LENGTH_SHORT).show();
                             }
                         })
                         .addOnFailureListener(new OnFailureListener() {
@@ -103,25 +113,85 @@ public class syllabus extends AppCompatActivity {
                 //final DocumentReference docref = db.collection("users").document("user1").collection("Title").document("Title_d");
 
                 final FirebaseFirestore rootRef = FirebaseFirestore.getInstance();
-                rootRef.collection("users").document("user1").collection("Title").document("Title_d")
+                rootRef.collection("users").document("user4").collection("Title").document("Title_d")
                         .get()
                         .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
                             @Override
                             public void onSuccess(DocumentSnapshot documentSnapshot) {
-                                final String sub_list = (String) documentSnapshot.get("Subject");
-                                Toast.makeText(getApplicationContext(), sub_list.toString(), Toast.LENGTH_LONG).show();
-                                final String sub_list2 = sub_list.concat(", " + syll_title);
-                                Map<String, Object> subj = new HashMap<>();
-                                subj.put("Subject", sub_list2);
 
-                                rootRef.collection("users").document("user1").collection("Title").document("Title_d")
-                                        .update(subj)
-                                        .addOnSuccessListener(new OnSuccessListener<Void>() {
-                                    @Override
-                                    public void onSuccess(Void aVoid) {
-                                        Toast.makeText(getApplicationContext(), "Updated subject title list" + sub_list2, Toast.LENGTH_SHORT).show();
+                                String sub_list = (String) documentSnapshot.get("Subject");
+                                Map<String, Object> subj = new HashMap<>();
+                                //Toast.makeText(getApplicationContext(), "Inside Get of syllabus, - " + documentSnapshot, Toast.LENGTH_LONG).show();
+
+                                if(!documentSnapshot.exists())
+                                {
+                                    Toast.makeText(com.example.time.syllabus.this, "Document Title_d doesn't exist", Toast.LENGTH_SHORT).show();
+                                    sub_list = syll_title;
+                                    subj.put("Subject", sub_list);
+
+                                    rootRef.collection("users").document("user4").collection("Title").document("Title_d")
+                                            .set(subj)
+                                            .addOnSuccessListener(new OnSuccessListener<Void>() {
+                                                @Override
+                                                public void onSuccess(Void aVoid) {
+                                                    Toast.makeText(getApplicationContext(), "Title_d created", Toast.LENGTH_SHORT).show();
+                                                }
+                                            });
+                                }
+
+
+                                else
+                                {
+                                    if(sub_list == null || sub_list.isEmpty())
+                                    {
+                                        sub_list = syll_title;
                                     }
-                                });
+                                    else
+                                    {
+                                        sub_list = sub_list.concat(", " + syll_title);
+                                    }
+                                    subj.put("Subject", sub_list);
+
+                                    rootRef.collection("users").document("user3").collection("Title").document("Title_d")
+                                            .update(subj)
+                                            .addOnSuccessListener(new OnSuccessListener<Void>() {
+                                                @Override
+                                                public void onSuccess(Void aVoid) {
+                                                    Toast.makeText(getApplicationContext(), "Updated subject title list", Toast.LENGTH_SHORT).show();
+                                                }
+                                            });
+                                }
+                                /*if(sub_list == null || sub_list.isEmpty())
+                                {
+                                    sub_list = syll_title;
+                                    subj.put("Subject", sub_list);
+
+                                    rootRef.collection("users").document("user3").collection("Title").document("Title_d")
+                                            .set(subj)
+                                            .addOnSuccessListener(new OnSuccessListener<Void>() {
+                                                @Override
+                                                public void onSuccess(Void aVoid) {
+                                                    Toast.makeText(getApplicationContext(), "Updated subject title list", Toast.LENGTH_SHORT).show();
+                                                }
+                                            });
+                                }
+
+                                else
+                                {
+                                    sub_list = sub_list.concat(", " + syll_title);
+
+                                    subj.put("Subject", sub_list);
+
+                                    rootRef.collection("users").document("user3").collection("Title").document("Title_d")
+                                            .update(subj)
+                                            .addOnSuccessListener(new OnSuccessListener<Void>() {
+                                                @Override
+                                                public void onSuccess(Void aVoid) {
+                                                    Toast.makeText(getApplicationContext(), "Updated subject title list", Toast.LENGTH_SHORT).show();
+                                                }
+                                            });
+                                }*/
+
                             }
                         });
 

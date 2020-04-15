@@ -118,9 +118,9 @@ public class exam2 extends AppCompatActivity {
                 final String time = exam2et3.getText().toString();
 
                 HashMap<String, Object> e_obj = new HashMap<>();
-                e_obj.put("Topic", task);
-                e_obj.put("Time", time);
-                e_obj.put("Checkbox State", false);
+                e_obj.put("topic", task);
+                e_obj.put("time", time);
+                e_obj.put("checkbox state", false);
 
                 sortv(time, e_obj);
                 //Toast.makeText(getApplicationContext(), "added" + time, Toast.LENGTH_SHORT).show();
@@ -159,7 +159,7 @@ public class exam2 extends AppCompatActivity {
 
                 Log.d("EXAMS", "added - " + exams.toString());
 
-                db.collection("users").document("user1").collection("exams list").document(exam_sub)
+                db.collection("users").document("user3").collection("exams list").document(exam_sub)
                         .set(exams)
                         .addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
@@ -174,7 +174,7 @@ public class exam2 extends AppCompatActivity {
                             }
                         });
 
-                db.collection("users").document("user1").collection("Title").document("Title_d")
+                db.collection("users").document("user3").collection("Title").document("Title_d")
                         .get()
                         .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
                             @Override
@@ -192,7 +192,7 @@ public class exam2 extends AppCompatActivity {
                                     subj.put("Exams", exam_list);
 
                                     final String finalExam_list = exam_list;
-                                    db.collection("users").document("user1").collection("Title").document("Title_d")
+                                    db.collection("users").document("user3").collection("Title").document("Title_d")
                                             .update(subj)
                                             .addOnSuccessListener(new OnSuccessListener<Void>() {
                                                 @Override
@@ -200,6 +200,8 @@ public class exam2 extends AppCompatActivity {
 
 
                                                     //Toast.makeText(getContext(), "Updated aat title list" + finalAat_list, Toast.LENGTH_SHORT).show();
+                                                    setResult(RESULT_OK);
+                                                    finish();
                                                 }
                                             });
                                 }
@@ -209,6 +211,7 @@ public class exam2 extends AppCompatActivity {
 
             }
         });
+
 
 
     }
@@ -223,7 +226,7 @@ public class exam2 extends AppCompatActivity {
         for(i = 0; i < exam_map.size(); i++)
         {
             HashMap<String, Object> temp = exam_map.get(i);
-            if (temp.get("Time").toString().compareTo(value) > 0)
+            if (temp.get("time").toString().compareTo(value) > 0)
                 break;
         }
 
@@ -255,11 +258,11 @@ public class exam2 extends AppCompatActivity {
 
             Log.d("EXAMS", temp.toString());
 
-            cb.setText(temp.get("Time") + " - " + temp.get("Topic"));
+            cb.setText(temp.get("time") + " - " + temp.get("topic"));
 
             cb.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
             cb.setTextColor(Color.DKGRAY);
-            cb.setChecked((Boolean) temp.get("Checkbox State"));
+            cb.setChecked((Boolean) temp.get("checkbox state"));
             //cb.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
             cb.setTextSize(15);
 

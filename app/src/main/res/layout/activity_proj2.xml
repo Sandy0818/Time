@@ -5,29 +5,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".exam2">
+    tools:context=".proj2">
 
     <TextView
-        android:id="@+id/exam2tv1"
+        android:id="@+id/p2tv1"
         style="@style/SubHeadings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="30dp"
-        android:text="Project name"
+        android:text="Project Name: "
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/exam2et1"
+        android:id="@+id/p2et1"
         android:layout_width="190dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:hint="Enter Subject"
+        android:hint="Enter Name"
         android:inputType="textPersonName"
         android:textSize="15dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/exam2tv1"
+        app:layout_constraintStart_toEndOf="@+id/p2tv1"
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
@@ -42,23 +42,23 @@
         app:layout_constraintTop_toBottomOf="@+id/linear_list">
 
         <TextView
-            android:id="@+id/exam2tv2"
+            android:id="@+id/p2tv2"
             style="@style/SubHeadings"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="30dp"
-            android:text="Topic: " />
+            android:text="Module/Phase: " />
 
         <EditText
-            android:id="@+id/exam2et2"
+            android:id="@+id/p2et2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="30dp"
             android:layout_marginRight="20dp"
             android:layout_weight="1"
-            android:hint="Enter the topic you want to study"
+            android:hint="Enter the phase of project"
             android:inputType="textPersonName"
             android:textSize="15sp" />
     </LinearLayout>
@@ -75,16 +75,16 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
         <TextView
-            android:id="@+id/exam2tv3"
+            android:id="@+id/p2tv3"
             style="@style/SubHeadings"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="30dp"
-            android:text="Time: " />
+            android:text="Date: " />
 
         <EditText
-            android:id="@+id/exam2et3"
+            android:id="@+id/p2et3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -92,13 +92,27 @@
             android:layout_marginRight="20dp"
             android:layout_weight="1"
             android:focusable="false"
-            android:hint="Select the time of Study"
+            android:hint="Select the phase start date"
             android:inputType="textPersonName"
             android:textSize="15sp" />
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/p2tv5"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="108dp"
+        android:text="To add description for each phase ,u can long press on a particular phase "
+        android:textColor="#838282"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.028"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
     <Button
-        android:id="@+id/exam2but1"
+        android:id="@+id/p2but1"
         style="@style/ButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -119,10 +133,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/exam_date" />
+        app:layout_constraintTop_toBottomOf="@+id/p_date" />
 
     <Button
-        android:id="@+id/exam2but2"
+        android:id="@+id/p2but2"
         style="@style/ButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -134,28 +148,28 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
-        android:id="@+id/textView20"
+        android:id="@+id/ptextView20"
         style="@style/SubHeadings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="30dp"
-        android:text="Project Date"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:text="Submission date:"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/exam2tv1" />
+        app:layout_constraintTop_toBottomOf="@+id/p2tv1" />
 
     <EditText
-        android:id="@+id/exam_date"
+        android:id="@+id/p_date"
         android:layout_width="180dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="28dp"
         android:layout_marginRight="28dp"
-        android:hint="Select date of Exam"
+        android:hint="Select due date of project"
         android:inputType="textPersonName"
         android:textSize="15sp"
         android:focusable="false"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/exam2et1" />
+        app:layout_constraintTop_toBottomOf="@+id/p2et1" />
 </androidx.constraintlayout.widget.ConstraintLayout>
