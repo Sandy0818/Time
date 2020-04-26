@@ -68,7 +68,7 @@ public class popup_dialog extends AppCompatDialogFragment {
             public void onDateSet(DatePicker view, int year, int monthOfYear,
                                   int dayOfMonth) {
                 // TODO Auto-generated method stub
-                updateLabel(dayOfMonth, monthOfYear, year);
+                updateLabel(dayOfMonth, monthOfYear + 1, year);
             }
 
         };
@@ -114,7 +114,7 @@ public class popup_dialog extends AppCompatDialogFragment {
         SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
 
         sel_date.setText(sdf.format(myCalendar.getTime()));*/
-        String slc_date = date + "-" + month + "-" + yr;
+        String slc_date = String.format("%02d-%02d-%04d", date, month, yr);
         sel_date.setText(slc_date);
     }
 
@@ -137,7 +137,7 @@ public class popup_dialog extends AppCompatDialogFragment {
         aat.put("date", a_date);
 
         try {
-            db.collection("users").document("user3").collection("aat list").document(name)
+            db.collection("users").document("user4").collection("aat list").document(name)
                     .set(aat)
                     .addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override
@@ -148,64 +148,54 @@ public class popup_dialog extends AppCompatDialogFragment {
                         }
                     });
 
-            db.collection("users").document("user3").collection("Title").document("Title_d")
+            db.collection("users").document("user4").collection("Title").document("Title_d")
                     .get()
                     .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
                         @Override
                         public void onSuccess(DocumentSnapshot documentSnapshot) {
                             //String wshop_list = "";
                             String aat_list = (String) documentSnapshot.get("AAT");
-                            Map<String, Object> aat_obj = new HashMap<>();
+                            final Map<String, Object> aat_obj = new HashMap<>();
                             //Toast.makeText(, aat_list.toString(), Toast.LENGTH_LONG).show();
 
-                            if(aat_list == null || aat_list.isEmpty())
+                            if(!documentSnapshot.exists())
                             {
+                                //Toast.makeText(com.example.time.syllabus.this, "Document Title_d doesn't exist", Toast.LENGTH_SHORT).show();
                                 aat_list = name;
                                 aat_obj.put("AAT", aat_list);
 
-                                db.collection("users").document("user3").collection("Title").document("Title_d")
+                                db.collection("users").document("user4").collection("Title").document("Title_d")
                                         .set(aat_obj)
                                         .addOnSuccessListener(new OnSuccessListener<Void>() {
                                             @Override
                                             public void onSuccess(Void aVoid) {
-                                                //Toast.makeText(getApplicationContext(), "Updated subject title list", Toast.LENGTH_SHORT).show();
+                                               // Toast.makeText(getApplicationContext(), "Title_d created", Toast.LENGTH_SHORT).show();
+                                                Log.d("aat", aat_obj.toString());
                                             }
                                         });
                             }
 
-                            else
+                            if(aat_list == null || aat_list.isEmpty())
                             {
+                                aat_list = name;
+                            }
+
+                            else {
                                 aat_list = aat_list.concat(", " + name);
+                            }
 
                                 aat_obj.put("AAT", aat_list);
 
-                                db.collection("users").document("user3").collection("Title").document("Title_d")
+                                db.collection("users").document("user4").collection("Title").document("Title_d")
                                         .update(aat_obj)
                                         .addOnSuccessListener(new OnSuccessListener<Void>() {
                                             @Override
                                             public void onSuccess(Void aVoid) {
                                                 //Toast.makeText(getApplicationContext(), "Updated subject title list", Toast.LENGTH_SHORT).show();
+                                                Log.d("aat", aat_obj.toString());
                                             }
                                         });
-                            }
 
-                            /*if(!aat_list.equals(null)) {
-                                aat_list = aat_list.concat(", " + name);
-                            }
-                            else
-                                aat_list = name;
-
-                            Map<String, Object> work_list = new HashMap<>();
-                            work_list.put("AAT", aat_list);
-
-                            db.collection("users").document("user3").collection("Title").document("Title_d")
-                                    .update(work_list)
-                                    .addOnSuccessListener(new OnSuccessListener<Void>() {
-                                        @Override
-                                        public void onSuccess(Void aVoid) {
-
-                                        }
-                                    });*/
                         }
                     });
         }

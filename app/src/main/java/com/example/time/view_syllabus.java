@@ -73,10 +73,10 @@ public class view_syllabus extends AppCompatActivity {
                     temp = syll_list.get(i);
 
                     cb.setId(i);
-                    cb.setText(temp.get("Topic").toString());
+                    cb.setText(temp.get("topic").toString());
 
                     //set the checked value based on what is stored in db
-                    if((Boolean) temp.get("Checkbox State"))
+                    if((Boolean) temp.get("checkbox state"))
                         cb.setChecked(true);
                     else
                         cb.setChecked(false);
@@ -104,10 +104,10 @@ public class view_syllabus extends AppCompatActivity {
                     CheckBox cb = (CheckBox) linearLayout.getChildAt(i);
 
                     if(cb.isChecked())
-                        syll_list.get(i).replace("Checkbox State", true);
+                        syll_list.get(i).replace("checkbox state", true);
                         //status.set(i, true);
                     else
-                        syll_list.get(i).replace("Checkbox State", false);
+                        syll_list.get(i).replace("checkbox state", false);
                         //status.set(i, false);
                 }
 

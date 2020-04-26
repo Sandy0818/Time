@@ -32,7 +32,7 @@ public class aat_display extends AppCompatActivity {
         else
             aat = (String) extras.get("AAT_name");
 
-        db.collection("users").document("user3").collection("aat list").document(aat)
+        db.collection("users").document("user4").collection("aat list").document(aat)
                 .get()
                 .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
                     @Override

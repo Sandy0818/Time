@@ -239,7 +239,7 @@ public class exam2 extends AppCompatActivity {
 
     private void updateLabel(int date, int month, int yr)
     {
-        String slc_date = date + "-" + month + "-" + yr;
+        String slc_date = String.format("%02d-%02d-%04d", date, month, yr);
         date_disp.setText(slc_date);
     }
 

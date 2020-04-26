@@ -161,36 +161,6 @@ public class syllabus extends AppCompatActivity {
                                                 }
                                             });
                                 }
-                                /*if(sub_list == null || sub_list.isEmpty())
-                                {
-                                    sub_list = syll_title;
-                                    subj.put("Subject", sub_list);
-
-                                    rootRef.collection("users").document("user3").collection("Title").document("Title_d")
-                                            .set(subj)
-                                            .addOnSuccessListener(new OnSuccessListener<Void>() {
-                                                @Override
-                                                public void onSuccess(Void aVoid) {
-                                                    Toast.makeText(getApplicationContext(), "Updated subject title list", Toast.LENGTH_SHORT).show();
-                                                }
-                                            });
-                                }
-
-                                else
-                                {
-                                    sub_list = sub_list.concat(", " + syll_title);
-
-                                    subj.put("Subject", sub_list);
-
-                                    rootRef.collection("users").document("user3").collection("Title").document("Title_d")
-                                            .update(subj)
-                                            .addOnSuccessListener(new OnSuccessListener<Void>() {
-                                                @Override
-                                                public void onSuccess(Void aVoid) {
-                                                    Toast.makeText(getApplicationContext(), "Updated subject title list", Toast.LENGTH_SHORT).show();
-                                                }
-                                            });
-                                }*/
 
                             }
                         });
