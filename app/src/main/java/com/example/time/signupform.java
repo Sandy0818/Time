@@ -4,18 +4,20 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 //import android.support.annotation.NonNull;
 //import android.support.v7.app.AppCompatActivity;
@@ -97,12 +99,22 @@ public class signupform extends AppCompatActivity implements View.OnClickListene
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         //checking if success
                         if(task.isSuccessful()){
+
+                            FirebaseUser user = firebaseAuth.getCurrentUser();
+                            Log.d("login", user.getUid());
+
                             finish();
-                            startActivity(new Intent(getApplicationContext(), home.class));
-                        }else{
+
+                            Intent intent = new Intent(getApplicationContext(), home.class);
+                            intent.putExtra("user_id", user.getUid());
+
+                            startActivity(intent);
+                        }
+                        else{
                             //display some message here
                             Toast.makeText(signupform.this,"Registration Error",Toast.LENGTH_LONG).show();
                         }
+
                         progressDialog.dismiss();
                     }
                 });

@@ -25,5 +25,6 @@
     <color name="gray_line_color">#292121</color>
 
     <color name="blue">#0000FF</color>
+    <color name="colorNull">#fafafa</color>
 
 </resources>

@@ -8,15 +8,15 @@ import android.widget.Button;
 import android.widget.CalendarView;
 import android.widget.Toast;
 
+import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
-
-import com.google.android.material.navigation.NavigationView;
-import com.google.firebase.auth.FirebaseAuth;
 
 
 public class home extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
@@ -26,7 +26,8 @@ public class home extends AppCompatActivity implements NavigationView.OnNavigati
     ActionBarDrawerToggle toggle;
     private FirebaseAuth firebaseAuth;
 
-
+    Bundle extras;
+    String uid;
 
     private static final String tag="Calender Activity";
 
@@ -38,6 +39,13 @@ public class home extends AppCompatActivity implements NavigationView.OnNavigati
         setContentView(R.layout.activity_home);
         setUpToolbar();
 
+        extras = getIntent().getExtras();
+        if(extras == null)
+            uid = null;
+        else
+            uid = (String) extras.get("user_id");
+
+        Log.d("login", "home - " + uid);
 
         navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
@@ -62,51 +70,6 @@ public class home extends AppCompatActivity implements NavigationView.OnNavigati
     }
 
 
-
-
-     /*   navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-                switch (menuItem.getItemId()) {
-                    case R.id.nav_syllabus:
-                        Intent intent1 = new Intent(home.this, syllabus.class);
-                        startActivity(intent1);
-                        break;
-
-                    case R.id.nav_status:
-                        Intent intent2 = new Intent(home.this, status.class);
-                        startActivity(intent2);
-                        break;
-
-                    case R.id.nav_notif:
-                        Intent intent3 = new Intent(home.this, schedule.class);
-                        startActivity(intent3);
-                        break;
-
-                    case R.id.nav_notes:
-                        Intent intent4 = new Intent(home.this, notes.class);
-                        startActivity(intent4);
-                        break;
-                    case R.id.nav_logout:
-                        Toast.makeText(home.this, "no notifications", Toast.LENGTH_LONG).show();
-                        break;
-
-                }
-                return false;
-            }
-        });*/
-
-
-
-
-
-    /* @Override
-     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-
-     return true;
-
-
-     }*/
     private void setUpToolbar() {
        try{ drawer = findViewById(R.id.drawer_layout);
         toolbar = findViewById(R.id.toorbar);
@@ -131,7 +94,8 @@ public class home extends AppCompatActivity implements NavigationView.OnNavigati
 
             case R.id.nav_syllabus:
                 //getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new syllabus()).commit();
-                Intent intent1=new Intent(home.this,syllabus_home.class);
+                Intent intent1 = new Intent(home.this,syllabus_home.class);
+                intent1.putExtra("user_id", uid);
                 startActivity(intent1);
                 break;
 
@@ -141,7 +105,8 @@ public class home extends AppCompatActivity implements NavigationView.OnNavigati
 
             case R.id.nav_notif:
                 //Toast.makeText(home.this, "no notifications", Toast.LENGTH_LONG).show();
-                Intent intent2=new Intent(home.this,tasks.class);
+                Intent intent2 = new Intent(home.this, tasks.class);
+                intent2.putExtra("user_id", uid);
                 startActivity(intent2);
                 break;
 

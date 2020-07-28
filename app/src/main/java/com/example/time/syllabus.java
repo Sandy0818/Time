@@ -34,6 +34,9 @@ public class syllabus extends AppCompatActivity {
     List<HashMap<String, Object>> syll_list = new ArrayList<>();
     HashMap<String, Object> temp = new HashMap<>();
 
+    Bundle extras;
+    String uid;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,6 +49,12 @@ public class syllabus extends AppCompatActivity {
         final EditText edit_topic = (EditText) findViewById(R.id.edit_topic);
         final LinearLayout ll = (LinearLayout) findViewById(R.id.linear_list);
         Button upload_syllabus = findViewById(R.id.submit_syllabus);
+
+        extras = getIntent().getExtras();
+        if(extras == null)
+            uid = null;
+        else
+            uid = (String) extras.get("user_id");
 
         //Toast.makeText(this, topic, Toast.LENGTH_SHORT).show();
 
@@ -95,7 +104,7 @@ public class syllabus extends AppCompatActivity {
                 //syllabus.put("topics", topic_list);
                 //syllabus.put("checkbox state", topic_state);
 
-                db.collection("users").document("user4").collection("syllabus list").document(syll_title)
+                db.collection("users").document(uid).collection("syllabus list").document(syll_title)
                         .set(syllabus)
                         .addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
@@ -113,7 +122,7 @@ public class syllabus extends AppCompatActivity {
                 //final DocumentReference docref = db.collection("users").document("user1").collection("Title").document("Title_d");
 
                 final FirebaseFirestore rootRef = FirebaseFirestore.getInstance();
-                rootRef.collection("users").document("user4").collection("Title").document("Title_d")
+                rootRef.collection("users").document(uid).collection("Title").document("Title_d")
                         .get()
                         .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
                             @Override
@@ -129,7 +138,7 @@ public class syllabus extends AppCompatActivity {
                                     sub_list = syll_title;
                                     subj.put("Subject", sub_list);
 
-                                    rootRef.collection("users").document("user4").collection("Title").document("Title_d")
+                                    rootRef.collection("users").document(uid).collection("Title").document("Title_d")
                                             .set(subj)
                                             .addOnSuccessListener(new OnSuccessListener<Void>() {
                                                 @Override
@@ -152,7 +161,7 @@ public class syllabus extends AppCompatActivity {
                                     }
                                     subj.put("Subject", sub_list);
 
-                                    rootRef.collection("users").document("user3").collection("Title").document("Title_d")
+                                    rootRef.collection("users").document(uid).collection("Title").document("Title_d")
                                             .update(subj)
                                             .addOnSuccessListener(new OnSuccessListener<Void>() {
                                                 @Override

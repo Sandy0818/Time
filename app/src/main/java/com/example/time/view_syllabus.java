@@ -25,6 +25,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class view_syllabus extends AppCompatActivity {
 
     String sub = "";                    //read subject from db or get it from calling subject
+    String uid;
     ArrayList<String> topic_list = new ArrayList<>();       //read lest of topics of given subject from db
     ArrayList<Boolean> status = new ArrayList<>();
     List<HashMap<String, Object>> syll_list = new ArrayList<>();
@@ -43,7 +44,10 @@ public class view_syllabus extends AppCompatActivity {
         if(extras == null)
             sub = null;
         else
+        {
             sub = (String) extras.get("Subject_name");
+            uid = (String) extras.get("user_id");
+        }
 
         Log.d("TAG", sub);
         subject.setText(sub);
@@ -56,7 +60,7 @@ public class view_syllabus extends AppCompatActivity {
 
         final FirebaseFirestore db = FirebaseFirestore.getInstance();
 
-        db.collection("users").document("user4").collection("syllabus list").document(sub)
+        db.collection("users").document(uid).collection("syllabus list").document(sub)
                 .get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
             @Override
             public void onSuccess(DocumentSnapshot documentSnapshot) {
@@ -118,7 +122,7 @@ public class view_syllabus extends AppCompatActivity {
                 data.put("syll_list", syll_list);
                 //data.put("topics", topic_list);
 
-                db.collection("users").document("user4").collection("syllabus list").document(sub)
+                db.collection("users").document(uid).collection("syllabus list").document(sub)
                         .update(data)
                         .addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
