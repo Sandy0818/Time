@@ -23,6 +23,9 @@ public class syllabus_home extends AppCompatActivity {
 
     List<String> items;
 
+    Bundle extras;
+    String uid;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,12 +33,20 @@ public class syllabus_home extends AppCompatActivity {
         final FloatingActionButton add_syll = (FloatingActionButton) findViewById(R.id.add_topic);
         final LinearLayout layout =(LinearLayout) findViewById(R.id.lay1);
 
+        extras = getIntent().getExtras();
+        if(extras == null)
+            uid = null;
+        else
+            uid = (String) extras.get("user_id");
+
+        Log.d("login", "syllabus home - " + uid);
+
         //get list of all subjects from db n create unique button for each subject
         //Button new_syll = (Button) findViewById(R.id.syll_button);
 
         final FirebaseFirestore db = FirebaseFirestore.getInstance();
 
-        db.collection("users").document("user4").collection("Title").document("Title_d")
+        db.collection("users").document(uid).collection("Title").document("Title_d")
                 .get()
                 .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
                                           @Override
@@ -78,6 +89,7 @@ public class syllabus_home extends AppCompatActivity {
                                                   Toast.makeText(getApplicationContext(), "button name " + name, Toast.LENGTH_SHORT).show();
                                                   Intent intent = new Intent(getApplicationContext(), view_syllabus.class);
                                                   intent.putExtra("Subject_name", name);
+                                                  intent.putExtra("user_id", uid);
                                                   startActivity(intent);
                                               }
                                           };
@@ -88,6 +100,7 @@ public class syllabus_home extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), syllabus.class);
+                intent.putExtra("user_id", uid);
                 startActivity(intent);
             }
         });
