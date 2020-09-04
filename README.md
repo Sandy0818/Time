@@ -1,2 +1,2 @@
 # TimeScheduler2
- Keep track of all your life activities
+ Keep track of all your college activities and assignments.
